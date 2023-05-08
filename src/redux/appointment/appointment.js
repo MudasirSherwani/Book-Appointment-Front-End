@@ -23,3 +23,10 @@ export const createNewAppointment = async (userid, datareserve) => {
     return data;
   };
 
+export const createAppointment = (userid, data) => ( async (dispatch) => {
+    const appiontment = await createNewAppointment(userid, data);
+    dispatch({
+        type: CREATE_APPOINTMENT,
+        payload: appiontment,
+    });
+});
