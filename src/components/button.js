@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Button = ({ text }) => (
   <button
     type="button"
-    className="main--text"
+    className="main--btn"
   >
     { text }
   </button>

@@ -1,13 +1,59 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+}
+
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 100vw;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.w--100 {
+  width: 100%;
+}
+
+.max--100 {
+  max-width: 100%;
+}
+
+.h--100 {
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.main--btn {
+  width: fit-content;
+  margin-top: 1rem;
+  background: #2fd3f8;
+  border-radius: 40px;
+  border: none;
+  font-weight: 800;
+  font-size: 3vh;
+  padding: 2% 5%;
+  color: #0a7992;
+  cursor: pointer;
+  box-shadow: 10px 8px 8px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
 }
