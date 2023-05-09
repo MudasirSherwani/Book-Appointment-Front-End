@@ -103,7 +103,18 @@ function AddDoctor() {
                 datatestid = 'input-name'
             />
             {nameError && <span className="error">Name is required</span>}
-        </div>        
+        </div>
+        <div className="form-group">
+            <span>City:</span>
+            <input
+                type="text"
+                id="city-input"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                datatestid = 'input-city'
+            />
+            {cityError && <span className="error">City is required</span>}
+        </div>
 
 
       </form>
