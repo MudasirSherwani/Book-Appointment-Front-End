@@ -136,6 +136,17 @@ function AddDoctor() {
             />
             {imageError && <span className="error">Image is required</span>}
         </div>
+        <div className="form-group">
+            <span>Speciality:</span>
+            <input
+                type="text"
+                id="speciality-input"
+                value={speciality}
+                onChange={(e) => setSpeciality(e.target.value)}
+                datatestid = 'input-speciality'
+            />
+            {specialityError && <span className="error">Speciality is required</span>}
+        </div>
 
 
       </form>
