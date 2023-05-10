@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 function AddDoctor() {
-  const user = JSON.parse(localStorage.getItem('user'));
+// const user = JSON.parse(localStorage.getItem('user'));
   const [name, setName] = useState('');
   const [city, setCity] = useState('');
   const [discription, setDiscription] = useState('');
@@ -93,64 +94,62 @@ function AddDoctor() {
       <form onSubmit={handleSubmit}>
         <h2>Add Doctor</h2>
         <div className="form-group">
-            <span>Name:</span>
-            <input
-                type="text"
-                id="name-input"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                datatestid = 'input-name'
-            />
-            {nameError && <span className="error">Name is required</span>}
+          <span>Name:</span>
+          <input
+            type="text"
+            id="name-input"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            data-testid="input-name"
+          />
+          {nameError && <span className="error">Name is required</span>}
         </div>
         <div className="form-group">
-            <span>City:</span>
-            <input
-                type="text"
-                id="city-input"
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
-                datatestid = 'input-city'
-            />
-            {cityError && <span className="error">City is required</span>}
+          <span>City:</span>
+          <input
+            type="text"
+            id="city-input"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            data-testid="input-city"
+          />
+          {cityError && <span className="error">City is required</span>}
         </div>
         <div className="form-group">
-            <span>Discription:</span>
-            <input
-                type="text"
-                id="discription-input"
-                value={discription}
-                onChange={(e) => setDiscription(e.target.value)}
-                datatestid = 'input-discription'
-            />
-            {discriptionError && <span className="error">Discription is required</span>}
+          <span>Discription:</span>
+          <input
+            type="text"
+            id="discription-input"
+            value={discription}
+            onChange={(e) => setDiscription(e.target.value)}
+            data-testid="input-discription"
+          />
+          {discriptionError && <span className="error">Discription is required</span>}
         </div>
         <div className="form-group">
-            <span>Image:</span>
-            <input
-                type="text"
-                id="image-input"
-                value={image}
-                onChange={(e) => setImage(e.target.value)}
-                datatestid = 'input-image'
-            />
-            {imageError && <span className="error">Image is required</span>}
+          <span>Image:</span>
+          <input
+            type="text"
+            id="image-input"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+            data-testid="input-image"
+          />
+          {imageError && <span className="error">Image is required</span>}
         </div>
         <div className="form-group">
-            <span>Speciality:</span>
-            <input
-                type="text"
-                id="speciality-input"
-                value={speciality}
-                onChange={(e) => setSpeciality(e.target.value)}
-                datatestid = 'input-speciality'
-            />
-            {specialityError && <span className="error">Speciality is required</span>}
+          <span>Speciality:</span>
+          <input
+            type="text"
+            id="speciality-input"
+            value={speciality}
+            onChange={(e) => setSpeciality(e.target.value)}
+            data-testid="input-speciality"
+          />
+          {specialityError && <span className="error">Speciality is required</span>}
         </div>
-
-
+        <button type="submit" data-testid="button-submit">Add Doctor</button>
       </form>
-
     </section>
   );
 }
