@@ -91,7 +91,7 @@ function AddDoctor() {
 
   return (
     <section className="add-doctor">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="doctor-form">
         <h2>Add Doctor</h2>
         <div className="form-group">
           <span>Name:</span>
@@ -148,7 +148,9 @@ function AddDoctor() {
           />
           {specialityError && <span className="error">Speciality is required</span>}
         </div>
-        <button type="submit" data-testid="button-submit">Add Doctor</button>
+        <div>
+        <button type="submit" data-testid="button-submit" class="doctor-submit-button">Add Doctor</button>
+        </div>
       </form>
     </section>
   );
