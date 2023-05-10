@@ -149,7 +149,7 @@ function AddDoctor() {
           {specialityError && <span className="error">Speciality is required</span>}
         </div>
         <div>
-        <button type="submit" data-testid="button-submit" class="doctor-submit-button">Add Doctor</button>
+          <button type="submit" data-testid="button-submit" className="doctor-submit-button">Add Doctor</button>
         </div>
       </form>
     </section>
