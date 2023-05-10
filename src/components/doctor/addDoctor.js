@@ -21,5 +21,48 @@ function AddDoctor(){
         setSpeciality("");
     }
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        let errors = false;
+
+        if(name === ""){
+            setNameError(true);
+            errors = true;
+        }else{
+            setNameError(false);
+        }
+
+        if(city === ""){
+            setCityError(true);
+            errors = true;
+        }else{
+            setCityError(false);
+        }
+
+        if(discription === ""){
+            setDiscriptionError(true);
+            errors = true;
+        }else{
+            setDiscriptionError(false);
+        }
+
+        if(image === ""){
+            setImageError(true);
+            errors = true;
+        }else{
+            setImageError(false);
+        }
+
+        if(speciality === ""){
+            setSpecialityError(true);
+            errors = true;
+        }else{
+            setSpecialityError(false);
+        }
+
+        
+    }
+
     
 }
