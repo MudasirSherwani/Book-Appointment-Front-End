@@ -61,8 +61,36 @@ function AddDoctor(){
             setSpecialityError(false);
         }
 
-        
+        if(!errors){
+            try{
+                const response = await fetch("http://localhost:3000/doctors", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+    
+                    },
+                    body: JSON.stringify({
+                        name,
+                        city,
+                        discription,
+                        image,
+                        speciality,
+                    }),
+                });
+                if(response.ok){
+                    toast.success('Doctor created successfully!');
+                    restValue();
+                }else{
+                    throw new Error('Failed to create doctor');
+                }
+            }
+            catch(error){
+                toast.error(error.message || 'Failed to create doctor');
+            }
+    
+        }
+    
     }
-
+    
     
 }
