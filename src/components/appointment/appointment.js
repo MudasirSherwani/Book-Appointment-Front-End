@@ -74,6 +74,9 @@ const BookAppointment = () => {
             value={time}
           />
         </div>
+        <div>
+          <button type="submit">Book Appiontment</button>
+        </div>
       </form>
     </section>
   );
