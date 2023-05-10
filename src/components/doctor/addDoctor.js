@@ -92,7 +92,7 @@ function AddDoctor() {
   return (
     <section className="add-doctor">
       <form onSubmit={handleSubmit} className="doctor-form">
-        <h2>Add Doctor</h2>
+        <h2 className="page-title">Add Doctor</h2>
         <div className="form-group">
           <span>Name:</span>
           <input
