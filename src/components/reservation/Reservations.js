@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
-import { getReservations } from '../../redux/appointment/reservationsSlice';
+import { getReservations } from '../../redux/reservation/reservationsSlice';
 
 function Reservations() {
   const dispatch = useDispatch();
@@ -25,6 +25,7 @@ function Reservations() {
       <div className="col-sm-6" key={reservation.id}>
         <div className="card">
           <div className="card-body">
+            <h5 className="card-title">{reservation.doctor_id}</h5>
             <h5 className="card-title">{reservation.city}</h5>
             <p className="card-text">
               {' '}
