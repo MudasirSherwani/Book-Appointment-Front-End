@@ -9,7 +9,7 @@
   position: fixed;
   z-index: -2;
   height: 100%;
-  min-width: 100vh;
+  min-width: 100vw;
 }
 
 @media (prefers-reduced-motion: no-preference) {
