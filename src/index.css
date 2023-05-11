@@ -1,5 +1,12 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -14,14 +21,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 100vw;
+  height: 100vh;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+.w--100 {
+  width: 100%;
+}
+
+.max--100 {
+  max-width: 100%;
+}
+
+.h--100 {
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
 }

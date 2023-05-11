@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Play:regular,700');
+
+.main--logo {
+  height: 30vmin;
+  pointer-events: none;
+}
+
+.main--bg {
+  position: fixed;
+  z-index: -2;
+  height: 100%;
+  min-width: 100vh;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .main--logo {
+    animation: main--logo-spin infinite 60s linear;
+  }
+}
+
+@keyframes main--logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.main--header {
+  font-family: 'Play', sans-serif;
+  font-size: 7vw;
+  color: #f5f5f5;
+}
+
+.landing--page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(10, 121, 146, 0.6), rgba(10, 121, 146, 0.6));
+}
+
+.welcome--page {
+  margin: auto;
+  padding: 9rem 4rem;
+  width: 100%;
+  height: inherit;
+  text-align: center;
+}
+
+.main--btn {
+  width: fit-content;
+  margin-top: 1rem;
+  background: linear-gradient(90deg, #2fd3f8, #22505a, #1a7ecff6);
+  border-radius: 40px;
+  border: none;
+  font-weight: 800;
+  font-size: 3vh;
+  padding: 2% 5%;
+  color: #e9f8fc;
+  cursor: pointer;
+  box-shadow: 10px 8px 8px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main--btn:hover {
+  opacity: 0.7;
+}
+
+.main--btn:active {
+  background: linear-gradient(45deg, #2fd3f8, #22505a, #1a7ecff6);
+  opacity: 0.9;
+}
