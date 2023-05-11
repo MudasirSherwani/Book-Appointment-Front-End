@@ -3,14 +3,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getReservations } from '../../redux/appointment/reservationsSlice'
 const Cards = ({ reservation }) => {
   return (
-    <div
-      className="col-lg-4 mb-3 d-flex align-items-stretch h-100"
-      key={reservation.id}
-    >
-      <div className="card">
-        <div className="card-body">
-          <h5 className="card-title">{reservation.name}</h5>
-          <p className="card-text">{reservation.city}</p>
+
+    <div class="col-sm-6" key={reservation.id}>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{reservation.city}</h5>
+          <p class="card-text"> {reservation.appointment_date} </p>
+          <a href="#" class="btn btn-primary">Cancel Reservation</a>
         </div>
       </div>
     </div>
@@ -18,7 +17,7 @@ const Cards = ({ reservation }) => {
 }
 function Reservations() {
   const dispatch = useDispatch()
-  const { data, loading, error } = useSelector((state) => state.reservationS)
+  const { data, loading, error } = useSelector((state) => state.reservations)
   useEffect(() => {
     dispatch(getReservations())
   }, [dispatch])
@@ -34,7 +33,7 @@ function Reservations() {
   }
   if (loading === 'idle') {
     content = data.map((item) => {
-      return <Cards Reservation={item} key={item.id} />
+      return <Cards reservation={item} key={item.id} />
     })
   }
   if (error !== null) {

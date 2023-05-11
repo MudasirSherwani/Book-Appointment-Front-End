@@ -1,9 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
-export const getReservations = createAsyncThunk('reservations/getReservations', async () => {
-  const response = await axios.get('http://127.0.0.1:3000/users/${userid}/appointments')
+export const getReservations = createAsyncThunk('reservations/getReservations',
+ async () => {
+  const response = await axios.get('http://127.0.0.1:1800/users/1/appointments')
   return response.data
-})
+});
 export const reservationsSlice = createSlice({
   name: 'reservations',
   initialState: {
