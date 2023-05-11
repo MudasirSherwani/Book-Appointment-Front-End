@@ -19,6 +19,7 @@ export const login = (reqBody) => async (dispatch) => {
   try {
     const data = await getToken(reqBody);
     localStorage.setItem('token', data.data.jti);
+    localStorage.setItem('user_id', data.data.id);
     localStorage.setItem('current_user', data.data.name);
     dispatch({ type: LOGIN_SUCCESS, payload: data.data.jti });
   } catch (error) {
@@ -29,6 +30,7 @@ export const login = (reqBody) => async (dispatch) => {
 export const logout = () => async (dispatch) => {
   localStorage.removeItem('token');
   localStorage.removeItem('current_user');
+  localStorage.removeItem('user_id');
   dispatch({ type: LOGOUT });
   toast.success('Logged out successfully');
 };
