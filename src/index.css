@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -42,18 +43,4 @@ body {
 
 .column {
   flex-direction: column;
-}
-
-.main--btn {
-  width: fit-content;
-  margin-top: 1rem;
-  background: #2fd3f8;
-  border-radius: 40px;
-  border: none;
-  font-weight: 800;
-  font-size: 3vh;
-  padding: 2% 5%;
-  color: #0a7992;
-  cursor: pointer;
-  box-shadow: 10px 8px 8px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
 }

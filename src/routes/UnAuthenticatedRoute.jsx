@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import LoginForm from '../components/user/Login';
 import SignupForm from '../components/user/Signup';
-import Home from '../home/Home';
+import Home from '../components/home/Home';
 
 const UnAuthenticatedRoute = () => (
   <Routes>

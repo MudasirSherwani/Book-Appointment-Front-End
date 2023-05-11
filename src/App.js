@@ -9,7 +9,7 @@ import UnAuthenticatedRoute from './routes/UnAuthenticatedRoute';
 function App() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   return (
-    <div className="App">
+    <div className="App w--100 h--100">
       <ToastContainer theme="colored" position="bottom-center" />
       {!isAuthenticated ? (
         <UnAuthenticatedRoute />

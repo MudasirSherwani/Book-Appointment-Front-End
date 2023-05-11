@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Logo from '../../assets/logo.svg';
 import Button from '../button';
-import doc from '../../assets/backgrounds/doc_stet.jpg';
+import doc from '../../assets/backgrounds/doc_stet.png';
 import book from '../../assets/backgrounds/book.jpg';
-import consulting from '../../assets/backgrounds/consulting.jpg';
-import help from '../../assets/backgrounds/help.jpg';
+import consulting from '../../assets/backgrounds/consulting.png';
+import help from '../../assets/backgrounds/help.png';
 import './home.css';
 
 const ImageChanger = () => {
@@ -28,7 +28,7 @@ const ImageChanger = () => {
 };
 
 const LandingPage = () => (
-  <section className="landing--page w-100 h--100">
+  <section className="landing--page w--100 h--100">
     { ImageChanger()}
     <div className="welcome--page flex column w--100 h--100">
       <img
