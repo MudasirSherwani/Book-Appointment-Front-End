@@ -2,22 +2,21 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
 function AddDoctor() {
-// const user = JSON.parse(localStorage.getItem('user'));
   const [name, setName] = useState('');
   const [city, setCity] = useState('');
-  const [discription, setDiscription] = useState('');
+  const [description, setDescription] = useState('');
   const [image, setImage] = useState('');
   const [speciality, setSpeciality] = useState('');
   const [nameError, setNameError] = useState(false);
   const [cityError, setCityError] = useState(false);
-  const [discriptionError, setDiscriptionError] = useState(false);
+  const [descriptionError, setDescriptionError] = useState(false);
   const [imageError, setImageError] = useState(false);
   const [specialityError, setSpecialityError] = useState(false);
 
   const restValue = () => {
     setName('');
     setCity('');
-    setDiscription('');
+    setDescription('');
     setImage('');
     setSpeciality('');
   };
@@ -41,11 +40,11 @@ function AddDoctor() {
       setCityError(false);
     }
 
-    if (discription === '') {
-      setDiscriptionError(true);
+    if (description === '') {
+      setDescriptionError(true);
       errors = true;
     } else {
-      setDiscriptionError(false);
+      setDescriptionError(false);
     }
 
     if (image === '') {
@@ -64,15 +63,17 @@ function AddDoctor() {
 
     if (!errors) {
       try {
-        const response = await fetch('http://localhost:3000/doctors', {
+        const token = localStorage.getItem('token');
+        const response = await fetch('http://127.0.0.1:3000/doctors', {
           method: 'POST',
           headers: {
+            Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
             name,
             city,
-            discription,
+            description,
             image,
             speciality,
           }),
@@ -120,11 +121,11 @@ function AddDoctor() {
           <input
             type="text"
             id="discription-input"
-            value={discription}
-            onChange={(e) => setDiscription(e.target.value)}
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
             data-testid="input-discription"
           />
-          {discriptionError && <span className="error">Discription is required</span>}
+          {descriptionError && <span className="error">Discription is required</span>}
         </div>
         <div className="form-group">
           <span>Image:</span>
