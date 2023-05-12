@@ -1,8 +1,8 @@
 import React from 'react';
-import LandingPage from './LandingPage';
+import { LandingPage } from './LandingPage';
 
 const Home = () => (
-  <section className="home--container h--100">
+  <section className="home--container h--100 dflex">
     <LandingPage />
   </section>
 );
