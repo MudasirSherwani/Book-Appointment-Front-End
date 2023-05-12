@@ -83,7 +83,7 @@ const BookAppointment = () => {
           />
         </div>
         <div>
-          <button type="submit" data-testid="button">Book Appiontment</button>
+          <button type="submit">Book Appiontment</button>
         </div>
       </form>
     </section>
