@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
-import Button from 'react-bootstrap/Button';
-import baseUrl from '../../redux/base_url';
-// import Form from 'react-bootstrap/Form';
 
 function AddDoctor() {
 // const user = JSON.parse(localStorage.getItem('user'));
@@ -66,13 +63,11 @@ function AddDoctor() {
     }
 
     if (!errors) {
-      const token = localStorage.getItem('token');
       try {
-        const response = await fetch(`${baseUrl}doctors`, {
+        const response = await fetch('http://localhost:3000/doctors', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify({
             name,
@@ -103,7 +98,6 @@ function AddDoctor() {
           <input
             type="text"
             id="name-input"
-            placeholder="Enter doctor name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             data-testid="input-name"
@@ -115,7 +109,6 @@ function AddDoctor() {
           <input
             type="text"
             id="city-input"
-            placeholder="Enter doctor city"
             value={city}
             onChange={(e) => setCity(e.target.value)}
             data-testid="input-city"
@@ -127,7 +120,6 @@ function AddDoctor() {
           <input
             type="text"
             id="discription-input"
-            placeholder="Enter doctor discription"
             value={discription}
             onChange={(e) => setDiscription(e.target.value)}
             data-testid="input-discription"
@@ -139,7 +131,6 @@ function AddDoctor() {
           <input
             type="text"
             id="image-input"
-            placeholder="Enter doctor image"
             value={image}
             onChange={(e) => setImage(e.target.value)}
             data-testid="input-image"
@@ -151,7 +142,6 @@ function AddDoctor() {
           <input
             type="text"
             id="speciality-input"
-            placeholder="Enter doctor speciality"
             value={speciality}
             onChange={(e) => setSpeciality(e.target.value)}
             data-testid="input-speciality"
@@ -159,9 +149,7 @@ function AddDoctor() {
           {specialityError && <span className="error">Speciality is required</span>}
         </div>
         <div>
-          <Button type="submit" data-testid="button-submit" className="doctor-submit-button">
-            Add Doctor
-          </Button>
+          <button type="submit" data-testid="button-submit" className="doctor-submit-button">Add Doctor</button>
         </div>
       </form>
     </section>
