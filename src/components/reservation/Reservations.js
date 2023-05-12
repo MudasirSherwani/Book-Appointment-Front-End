@@ -31,7 +31,6 @@ function Reservations() {
               {reservation.appointment_date}
               {' '}
             </p>
-            <a href="#cancelReservation" className="btn btn-primary">Cancel Reservation</a>
           </div>
         </div>
       </div>
