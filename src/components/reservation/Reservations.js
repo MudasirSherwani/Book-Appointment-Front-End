@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import PropTypes from 'prop-types';
 import { getReservations } from '../../redux/reservation/reservationsSlice';
 
 function Reservations() {
@@ -48,11 +47,4 @@ function Reservations() {
   return <div className="row">{content}</div>;
 }
 
-Reservations.propTypes = {
-  reservation: PropTypes.shape({
-    id: PropTypes.number,
-    city: PropTypes.string,
-    appointment_date: PropTypes.number,
-  }).isRequired,
-};
 export default Reservations;

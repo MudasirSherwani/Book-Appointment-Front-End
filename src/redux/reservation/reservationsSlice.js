@@ -4,7 +4,8 @@ import axios from 'axios';
 
 export const getReservations = createAsyncThunk('reservations/getReservations',
   async () => {
-    const response = await axios.get('http://127.0.0.1:1800/users/1/appointments');
+    const userid = JSON.parse(window.localStorage.getItem('user_id'));
+    const response = await axios.get(`http://127.0.0.1:1800/users/${userid}/appointments`);
     return response.data;
   });
 export const reservationsSlice = createSlice({
