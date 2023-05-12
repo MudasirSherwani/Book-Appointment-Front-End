@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
+import baseUrl from '../../redux/base_url';
 
 function AddDoctor() {
   const [name, setName] = useState('');
@@ -64,7 +65,7 @@ function AddDoctor() {
     if (!errors) {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('http://127.0.0.1:3000/doctors', {
+        const response = await fetch(`${baseUrl}doctors`, {
           method: 'POST',
           headers: {
             Authorization: `Bearer ${token}`,
