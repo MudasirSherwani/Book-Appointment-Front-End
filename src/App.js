@@ -1,18 +1,23 @@
+import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Reservations from './components/reservation/Reservations';
+import { useSelector } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import AuthenticatedRoute from './routes/AuthenticatedRoute';
+import UnAuthenticatedRoute from './routes/UnAuthenticatedRoute';
+// import Reservations from './components/reservation/Reservations';
 
 function App() {
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   return (
-    <div className="container">
-      <div className="d-flex border-bottom pt-2 pb-2 mb-5">
-        <div>
-          <div>
-            <h3><b> Reservations</b></h3>
-          </div>
-        </div>
-      </div>
-      <Reservations />
+    <div className="App w--100 h--100">
+      <ToastContainer theme="colored" position="bottom-center" />
+      {!isAuthenticated ? (
+        <UnAuthenticatedRoute />
+      ) : (
+        <AuthenticatedRoute />
+      )}
     </div>
   );
 }
