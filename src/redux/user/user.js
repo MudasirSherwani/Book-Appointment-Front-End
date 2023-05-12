@@ -28,3 +28,18 @@ export const getToken = async (reqBody) => {
     throw new Error(error);
   }
 };
+
+export const signOut = async (token) => {
+  try {
+    const response = await axios.delete(`${baseUrl}users/sign_out`, {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: token,
+      },
+    });
+    toast.success('Logged out successfully');
+    return response.data;
+  } catch (error) {
+    throw new Error(error);
+  }
+};

@@ -1,41 +1,30 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchDoctors } from '../../redux/doctor/doctor';
-import Layout from './Layout';
-import Doctor from '../doctor/Doctor';
-
-// import React, { useEffect } from 'react';
+import React from 'react';
 // import { useDispatch, useSelector } from 'react-redux';
 // import { fetchDoctors } from '../../redux/doctor/doctor';
-
-// const Doctors = () => {
-//   const dispatch = useDispatch();
-//   const doctors = useSelector((state) => state.doctors);
-
-//   useEffect(() => {
-//     dispatch(fetchDoctors());
-//   }, [dispatch]);
-
-//   return (
-//     <div>
-//       {doctors.map((doctor) => (
-//         <div key={doctor.id}>
-//           <h1>{doctor.name}</h1>
-//           <h2>{doctor.specialty}</h2>
-//           <h3>{doctor.location}</h3>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
+import Layout from '../navbar/Layout';
+import Doctor from '../doctor/Doctor';
 
 const Homepage = () => {
-  const dispatch = useDispatch();
-  const doctors = useSelector((state) => state.doctors);
+  // const dispatch = useDispatch();
+  // const doctors = useSelector((state) => state.doctors);
+  const doctors = [
+    {
+      name: 'Dr. John Doe', city: 'Lagos', description: 'hello man', speciality: 'Dentist', id: 1,
+    },
+    {
+      name: 'Dr. John Doe', city: 'Lagos', description: 'hello man', speciality: 'Dentist', id: 2,
+    },
+    {
+      name: 'Dr. John Doe', city: 'Lagos', description: 'hello man', speciality: 'Dentist', id: 3,
+    },
+    {
+      name: 'Dr. John Doe', city: 'Lagos', description: 'hello man', speciality: 'Dentist', id: 4,
+    },
+  ];
 
-  useEffect(() => {
-    dispatch(fetchDoctors());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchDoctors());
+  // }, [dispatch]);
 
   return (
     <>
@@ -48,7 +37,7 @@ const Homepage = () => {
             Feel free to book an appointment with any of our doctors today.
           </p>
         </div>
-        <div className="home--main--content">
+        <div className="main--doc--content">
           {doctors.map((doctor) => (
             <Doctor key={doctor.id} doctor={doctor} />
           ))}
