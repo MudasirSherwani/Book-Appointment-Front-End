@@ -1,3 +1,4 @@
+import React from 'react'
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import baseUrl from '../../redux/base_url';
@@ -43,29 +44,34 @@ const DetailsPage = () => {
         </div>
         <div className="doctor-info">
           <ul>
-            <li className="name">{doctor.name}</li>
+          <li className="-info">
+              NAME:
+              {' '}
+              <span>{doctor.name}</span>
+            </li>
             <li className="-info">
-              SPECIALITY
+              SPECIALITY:
               {' '}
               <span>{doctor.speciality}</span>
             </li>
             <li className="-info">
-              DISCRIPTION
+              DISCRIPTION:
               {' '}
               <span>{doctor.description}</span>
             </li>
             <li className="-info">
-              CITY
+              CITY:
               {' '}
               <span>{doctor.city}</span>
+            </li>
+            <li className="-info">
+            <button type="button">Appoint </button>
             </li>
             <div className="link">
               <Link to="/" className="discover">
                 Discover more doctors
                 {' '}
               </Link>
-              <img className="circle" src="" alt="circle" />
-              <button type="button">Appoint </button>
             </div>
           </ul>
         </div>
