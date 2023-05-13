@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { toast } from 'react-toastify';
 import baseUrl from '../../redux/base_url';
 
@@ -14,12 +15,26 @@ function AddDoctor() {
   const [imageError, setImageError] = useState(false);
   const [specialityError, setSpecialityError] = useState(false);
 
-  const restValue = () => {
+  const resetValues = () => {
     setName('');
     setCity('');
     setDescription('');
     setImage('');
     setSpeciality('');
+  };
+
+  // Upload image to third-party server API
+  const handleImageUpload = async (event) => {
+    const file = event.target.files[0];
+    const formData = new FormData();
+    formData.append('image', file);
+    try {
+      const response = await axios.post('https://api.imgbb.com/1/upload?key=8b33c005b4494d49345774dd0cde37db', formData);
+      setImage(response.data.data.url);
+      console.log(response.data.data.url);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -81,7 +96,7 @@ function AddDoctor() {
         });
         if (response.ok) {
           toast.success('Doctor created successfully!');
-          restValue();
+          resetValues();
         } else {
           throw new Error('Failed to create doctor');
         }
@@ -118,23 +133,22 @@ function AddDoctor() {
           {cityError && <span className="error">City is required</span>}
         </div>
         <div className="form-group">
-          <span>Discription:</span>
+          <span>Description:</span>
           <input
             type="text"
-            id="discription-input"
+            id="description-input"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            data-testid="input-discription"
+            data-testid="input-description"
           />
-          {descriptionError && <span className="error">Discription is required</span>}
+          {descriptionError && <span className="error">Description is required</span>}
         </div>
         <div className="form-group">
           <span>Image:</span>
           <input
-            type="text"
+            type="file"
             id="image-input"
-            value={image}
-            onChange={(e) => setImage(e.target.value)}
+            onChange={handleImageUpload}
             data-testid="input-image"
           />
           {imageError && <span className="error">Image is required</span>}
@@ -151,11 +165,13 @@ function AddDoctor() {
           {specialityError && <span className="error">Speciality is required</span>}
         </div>
         <div>
-          <button type="submit" data-testid="button-submit" className="doctor-submit-button">Add Doctor</button>
+          <button type="submit" data-testid="button-submit" className="doctor-submit-button">
+            Add Doctor
+          </button>
         </div>
       </form>
     </section>
   );
-}
+};
 
 export default AddDoctor;
