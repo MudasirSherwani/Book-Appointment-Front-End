@@ -1,10 +1,12 @@
 import React from 'react';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { useSelector } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AuthenticatedRoute from './routes/AuthenticatedRoute';
 import UnAuthenticatedRoute from './routes/UnAuthenticatedRoute';
+// import Reservations from './components/reservation/Reservations';
 
 function App() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);

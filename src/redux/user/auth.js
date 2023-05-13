@@ -20,7 +20,7 @@ export const login = (reqBody) => async (dispatch) => {
     const data = await getToken(reqBody);
     localStorage.setItem('token', data.token);
     localStorage.setItem('user_id', data.id);
-    localStorage.setItem('current_user', data.data.name);
+    localStorage.setItem('current_user', data.name);
     dispatch({ type: LOGIN_SUCCESS, payload: data.token });
   } catch (error) {
     dispatch({ type: LOGIN_FAIL, payload: error.message });
