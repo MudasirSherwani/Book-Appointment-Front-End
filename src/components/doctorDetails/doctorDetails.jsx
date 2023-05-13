@@ -1,5 +1,4 @@
-import React from 'react'
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import baseUrl from '../../redux/base_url';
 
@@ -26,11 +25,11 @@ const DetailsPage = () => {
         const data = await response.json();
         setDoctor(data);
       } catch (error) {
-        console.error(error);
+        throw new Error(error.message);
       }
     };
     fetchDoctor();
-  }, [baseUrl, id]);
+  }, [id]);
 
   if (!doctor) {
     return <div>Loading...</div>;
@@ -44,7 +43,7 @@ const DetailsPage = () => {
         </div>
         <div className="doctor-info">
           <ul>
-          <li className="-info">
+            <li className="-info">
               NAME:
               {' '}
               <span>{doctor.name}</span>
@@ -65,7 +64,7 @@ const DetailsPage = () => {
               <span>{doctor.city}</span>
             </li>
             <li className="-info">
-            <button type="button">Appoint </button>
+              <button type="button">Appoint </button>
             </li>
             <div className="link">
               <Link to="/" className="discover">
