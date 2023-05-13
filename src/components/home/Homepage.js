@@ -1,30 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // import { useDispatch, useSelector } from 'react-redux';
 // import { fetchDoctors } from '../../redux/doctor/doctor';
 import Layout from '../navbar/Layout';
 import Doctor from '../doctor/Doctor';
+import baseUrl from '../../redux/base_url';
 
 const Homepage = () => {
-  // const dispatch = useDispatch();
-  // const doctors = useSelector((state) => state.doctors);
-  const doctors = [
-    {
-      name: 'Dr. John Doe', city: 'Lagos', description: 'hello man', speciality: 'Dentist', id: 1,
-    },
-    {
-      name: 'Dr. John Doe', city: 'Lagos', description: 'hello man', speciality: 'Dentist', id: 2,
-    },
-    {
-      name: 'Dr. John Doe', city: 'Lagos', description: 'hello man', speciality: 'Dentist', id: 3,
-    },
-    {
-      name: 'Dr. John Doe', city: 'Lagos', description: 'hello man', speciality: 'Dentist', id: 4,
-    },
-  ];
+  const [doctors, setDoctor] = useState(null);
 
-  // useEffect(() => {
-  //   dispatch(fetchDoctors());
-  // }, [dispatch]);
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    const fetchDoctor = async () => {
+      try {
+        const response = await fetch(`${baseUrl}doctors/`, {
+          method: 'GET',
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json',
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch doctors');
+        }
+
+        const data = await response.json();
+        setDoctor(data);
+      } catch (error) {
+        throw new Error(error.message);
+      }
+    };
+    fetchDoctor();
+  }, []);
+  if (!doctors) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
