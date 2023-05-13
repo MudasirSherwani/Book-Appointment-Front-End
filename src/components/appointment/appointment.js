@@ -48,16 +48,22 @@ const BookAppointment = () => {
         : <h4>Kindly Go back to doctors list to select your favourite doctor</h4>}
       <form onSubmit={newAppointment}>
         <div>
-          <h3>Fill In The Form To Book Appiontment</h3>
+          <h3>Fill In The Form To Book an Appiontment</h3>
           <input
             type="text"
+            id="disease"
             placeholder="Enter Your Disease"
+            onChange={(e) => setDisease(e.target.value)}
             value={disease}
+            data-testid="input-disease"
           />
           <input
             type="text"
+            id="city"
             placeholder="Enter Your Address"
+            onChange={(e) => setCity(e.target.value)}
             value={city}
+            data-testid="input-city"
           />
           <input
             type="date"
@@ -65,6 +71,7 @@ const BookAppointment = () => {
             placeholder="date"
             onChange={(e) => setDate(e.target.value)}
             value={date}
+            data-testid="input-date"
           />
           <input
             type="time"
@@ -72,7 +79,11 @@ const BookAppointment = () => {
             placeholder="time for appiontment"
             onChange={(e) => setTime(e.target.value)}
             value={time}
+            data-testid="input-time"
           />
+        </div>
+        <div>
+          <button type="submit" data-testid="button">Book Appiontment</button>
         </div>
       </form>
     </section>
