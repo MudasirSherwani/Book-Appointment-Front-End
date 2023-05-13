@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import { authReducer } from './user/auth';
 
