@@ -3,13 +3,14 @@ import { useDispatch } from 'react-redux';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { Logo } from '../home/LandingPage';
 import Button from '../button';
-import { signOut } from '../../redux/user/user';
+// import { signOut } from '../../redux/user/user';
+import { logout } from '../../redux/user/auth';
 
 const Layout = () => {
   const dispatch = useDispatch();
   const redirect = useNavigate();
   const handleButtonClick = () => {
-    dispatch(signOut());
+    dispatch(logout());
     redirect('/login');
   };
 
