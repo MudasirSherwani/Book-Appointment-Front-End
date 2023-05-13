@@ -172,6 +172,6 @@ function AddDoctor() {
       </form>
     </section>
   );
-};
+}
 
 export default AddDoctor;
