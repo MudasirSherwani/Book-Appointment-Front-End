@@ -8,6 +8,25 @@ const DeleteDoctor = () => {
   const [doctors, setDoctors] = useState([]);
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    // Fetch API data and update the state of doctors
+    const token = localStorage.getItem("token");
+    fetch(`${baseUrl}doctors/`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => setDoctors(data));
+  }, []);
+
+
   return (
     <React.Fragment>
     <Container className="content">
