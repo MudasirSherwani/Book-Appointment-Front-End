@@ -19,3 +19,20 @@ export const fetchDoctors = createAsyncThunk('GET_DOCTORS', async (thunkAPI) => 
     return thunkAPI.rejectWithValue(error.response.data.error);
   }
 });
+
+// remove a doctor
+export const removeDoctor = createAsyncThunk(REMOVE_DOCTOR, async (id, thunkAPI) => {
+  const token = localStorage.getItem('token');
+  const requestOptions = {
+    method: 'DELETE',
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  try {
+    return await axios.delete(`${baseUrl}doctors/${id}`, requestOptions);
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error.response.data.error);
+  }
+});
