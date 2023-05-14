@@ -36,3 +36,12 @@ export const removeDoctor = createAsyncThunk(REMOVE_DOCTOR, async (id, thunkAPI)
     return thunkAPI.rejectWithValue(error.response.data.error);
   }
 });
+
+const initialState = {
+  doctors: [],
+  isLoading: false,
+  success: false,
+  error: '',
+  doctor: null,
+  response: null,
+};
