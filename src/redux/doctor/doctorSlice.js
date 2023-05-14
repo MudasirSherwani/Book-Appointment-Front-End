@@ -47,5 +47,11 @@ const initialState = {
 };
 
 const doctorSlice = createSlice({
-
+  name: 'doctors',
+  initialState,
+  reducers: {},
+  extraReducers: (reduce) => {
+ 
+  },
 });
+
