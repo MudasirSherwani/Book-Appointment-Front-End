@@ -27,6 +27,8 @@ const DeleteDoctor = () => {
   }, []);
 
   const handleDelete = (id) => {
+    // Dispatch the removeDoctor action with the id
+    dispatch(removeDoctor(id));
 
   };
 
