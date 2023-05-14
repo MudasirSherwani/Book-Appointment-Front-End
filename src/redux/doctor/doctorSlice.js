@@ -1,15 +1,15 @@
-import axios from "axios";
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from 'axios';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import baseUrl from '../base_url';
 // actions
-const REMOVE_DOCTOR = "redux/doctor/remove";
+const REMOVE_DOCTOR = 'redux/doctor/remove';
 
 // show all doctors
 export const fetchDoctors = createAsyncThunk('GET_DOCTORS', async (thunkAPI) => {
   const token = localStorage.getItem('token');
   const requestOptions = {
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
       Authorization: `Bearer ${token}`,
     },
   };
@@ -26,7 +26,7 @@ export const removeDoctor = createAsyncThunk(REMOVE_DOCTOR, async (id, thunkAPI)
   const requestOptions = {
     method: 'DELETE',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
       Authorization: `Bearer ${token}`,
     },
   };
