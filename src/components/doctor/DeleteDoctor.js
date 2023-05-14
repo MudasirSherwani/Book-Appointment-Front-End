@@ -11,3 +11,4 @@ const DeleteDoctor = () => {
   );
 };
 
+export default DeleteDoctor;
