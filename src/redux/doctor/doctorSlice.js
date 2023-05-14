@@ -65,6 +65,13 @@ const doctorSlice = createSlice({
         isLoading: true,
         error: '',
       }))
+      .addCase(fetchDoctors.rejected, (state, action) => ({
+        ...state,
+        isLoading: false,
+        success: false,
+        error: action.payload,
+      }));
+
 
   },
 });
