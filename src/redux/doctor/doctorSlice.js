@@ -79,6 +79,12 @@ const doctorSlice = createSlice({
         isLoading: true,
         error: '',
       }))
+      .addCase(removeDoctor.fulfilled, (state, action) => ({
+        ...state,
+        isLoading: false,
+        success: true,
+        id: action.payload.data.data,
+      }))
 
   },
 });
