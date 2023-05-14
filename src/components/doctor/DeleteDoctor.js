@@ -7,7 +7,46 @@ import baseUrl from '../../redux/base_url';
 const DeleteDoctor = () => {
 
   return (
+    <React.Fragment>
+    <Container className="content">
+   <div className="row">
+    <div className="col-sm-12">
+    <h2 className="mt-4 mb-4 fw-bold">
+        Delete a Doctor  
+      </h2>
+      <form className="form w-100">
+      <table className="table">
+      <thead>            
+      <tr>
+      <th>Sr. No</th>
+      <th>Doctor Name</th>
+      <th>City</th>
+      <th>Specility</th>
+      <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      {doctors.map((doctor,index) => ( 
+      <tr   key={doctor.id}>
+        <td>{ index+1} </td>
 
+      <td>{ doctor.name} </td>
+      <td>{ doctor.city} </td>
+      <td>{ doctor.speciality} </td>
+      <td>
+        Delete
+      </button></td>
+      </tr>
+        ))
+      }
+
+      </tbody>
+      </table>
+      </form>
+      </div>
+      </div>
+      </Container>
+  </React.Fragment>
   );
 };
 
