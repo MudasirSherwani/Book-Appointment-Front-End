@@ -85,7 +85,11 @@ const doctorSlice = createSlice({
         success: true,
         id: action.payload.data.data,
       }))
-
+      .addCase(removeDoctor.rejected, (state, action) => ({
+        ...state,
+        isLoading: false,
+        error: action.payload.data.error,
+      }));
   },
 });
 
