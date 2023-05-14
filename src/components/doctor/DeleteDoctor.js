@@ -30,6 +30,9 @@ const DeleteDoctor = () => {
     // Dispatch the removeDoctor action with the id
     dispatch(removeDoctor(id));
 
+    // Update the state by filtering out the deleted doctor
+    const updatedDoctors = doctors.filter((doctor) => doctor.id !== id);
+    setDoctors(updatedDoctors);
   };
 
   return (
