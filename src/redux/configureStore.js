@@ -14,6 +14,7 @@ const initialState = {
 const rootReducer = combineReducers({
   auth: authReducer,
   reservations: reservationsReducer,
+  doctorSlice: doctorsReducer,
 });
 
 export default configureStore({
