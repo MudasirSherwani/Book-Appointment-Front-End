@@ -51,7 +51,16 @@ const doctorSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (reduce) => {
- 
+    // show doctors reducers
+    reduce
+      .addCase(fetchDoctors.fulfilled, (state, action) => (
+        {
+          ...state,
+          isLoading: false,
+          success: true,
+          doctors: action.payload.data,
+        }))
+
   },
 });
 
