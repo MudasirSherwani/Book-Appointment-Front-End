@@ -47,7 +47,7 @@ const DeleteDoctor = () => {
               <table className="table">
                 <thead>
                   <tr>
-                    <th>Sr. No</th>
+                    <th>Dr. No</th>
                     <th>Doctor Name</th>
                     <th>City</th>
                     <th>speciality</th>
