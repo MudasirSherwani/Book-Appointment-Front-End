@@ -45,3 +45,7 @@ const initialState = {
   doctor: null,
   response: null,
 };
+
+const doctorSlice = createSlice({
+
+});
