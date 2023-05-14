@@ -60,6 +60,11 @@ const doctorSlice = createSlice({
           success: true,
           doctors: action.payload.data,
         }))
+      .addCase(fetchDoctors.pending, (state) => ({
+        ...state,
+        isLoading: true,
+        error: '',
+      }))
 
   },
 });
