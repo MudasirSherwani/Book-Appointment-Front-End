@@ -26,6 +26,9 @@ const DeleteDoctor = () => {
       .then((data) => setDoctors(data));
   }, []);
 
+  const handleDelete = (id) => {
+
+  };
 
   return (
     <React.Fragment>
