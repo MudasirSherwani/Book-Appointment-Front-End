@@ -72,6 +72,13 @@ const doctorSlice = createSlice({
         error: action.payload,
       }));
 
+    // delete reducer
+    reduce
+      .addCase(removeDoctor.pending, (state) => ({
+        ...state,
+        isLoading: true,
+        error: '',
+      }))
 
   },
 });
