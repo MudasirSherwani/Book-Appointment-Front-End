@@ -33,7 +33,7 @@ const DeleteDoctor = () => {
       <td>{ doctor.name} </td>
       <td>{ doctor.city} </td>
       <td>{ doctor.speciality} </td>
-      <td>
+      <td><button type="button" onClick={() => handleDelete(doctor.id)}  className="btn btn-danger mb-3">
         Delete
       </button></td>
       </tr>
