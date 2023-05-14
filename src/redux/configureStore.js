@@ -1,6 +1,7 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import { authReducer } from './user/auth';
 import reservationsReducer from './reservation/reservationsSlice';
+import doctorsReducer from './doctor/doctorSlice'
 
 const token = localStorage.getItem('token');
 const initialState = {
