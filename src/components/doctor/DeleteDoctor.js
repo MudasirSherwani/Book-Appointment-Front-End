@@ -5,6 +5,8 @@ import { removeDoctor } from "../../redux/doctor/doctorSlice";
 import baseUrl from '../../redux/base_url';
 
 const DeleteDoctor = () => {
+  const [doctors, setDoctors] = useState([]);
+  const dispatch = useDispatch();
 
   return (
     <React.Fragment>
