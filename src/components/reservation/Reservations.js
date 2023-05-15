@@ -56,23 +56,23 @@ function Reservations() {
   if (loading === 'idle') {
     content = data.map((reservation, index) => (
       <tr key={reservation.id}>
-      <td>
-        { index + 1}
-        {' '}
-      </td>
-      <td>
-      <GetDoctorName doctorId={reservation.doctor_id} />
-        {' '}
-      </td>
-      <td>
-      {reservation.city}
-        {' '}
-      </td>
-      <td>
-      {reservation.appointment_date}
-        {' '}
-      </td>
-    </tr>
+        <td>
+          { index + 1}
+          {' '}
+        </td>
+        <td>
+          <GetDoctorName doctorId={reservation.doctor_id} />
+          {' '}
+        </td>
+        <td>
+          {reservation.city}
+          {' '}
+        </td>
+        <td>
+          {reservation.appointment_date}
+          {' '}
+        </td>
+      </tr>
     ));
   }
   if (error !== null) {
@@ -84,31 +84,31 @@ function Reservations() {
   }
   return (
     <>
-<Container className="content">
-  <div className="row">
-    <div className="col-sm-12">
-      <h2 className="mt-4 mb-4 fw-bold">
-        Reservations
-      </h2>
-      <form className="form w-100">
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Res. No</th>
-              <th>Doctor Name</th>
-              <th>City</th>
-              <th>Date</th>
-            </tr>
-          </thead>
-          <tbody>
-          {content}
-          </tbody>
-        </table>
-      </form>
-    </div>
-  </div>
-</Container>
-</>
+      <Container className="content">
+        <div className="row">
+          <div className="col-sm-12">
+            <h2 className="mt-4 mb-4 fw-bold">
+              Reservations
+            </h2>
+            <form className="form w-100">
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th>Res. No</th>
+                    <th>Doctor Name</th>
+                    <th>City</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {content}
+                </tbody>
+              </table>
+            </form>
+          </div>
+        </div>
+      </Container>
+    </>
   );
 }
 
