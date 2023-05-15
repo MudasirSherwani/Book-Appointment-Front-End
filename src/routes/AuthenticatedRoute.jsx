@@ -4,6 +4,7 @@ import Reservations from '../components/reservation/Reservations';
 import AddDoctor from '../components/doctor/addDoctor';
 import DoctorDetails from '../components/doctorDetails/doctorDetails';
 import DeleteDoctor from '../components/doctor/DeleteDoctor';
+import BookAppointment from '../components/appointment/appointment';
 
 const AuthenticatedRoute = () => (
   <>
@@ -13,6 +14,7 @@ const AuthenticatedRoute = () => (
       <Route path="/add-doctor" element={<AddDoctor />} />
       <Route path="/details/:id" element={<DoctorDetails />} />
       <Route path="/delete-doctor" element={<DeleteDoctor />} />
+      <Route path="/book-appointment" element={<BookAppointment />} />
     </Routes>
   </>
 );
