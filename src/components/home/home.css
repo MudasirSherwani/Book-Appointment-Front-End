@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Play:regular,700');
 
 .main--logo {
-  height: 30vmin;
+  height: 15vmin;
   pointer-events: none;
+  margin: 1rem auto;
+}
+
+.nav--link.main--logo:hover {
+  background-color: transparent;
+  /* color: #fff; */
 }
 
 .main--bg {
@@ -53,7 +59,7 @@
 }
 
 .main--btn {
-  width: fit-content;
+  width: auto;
   margin-top: 1rem;
   background: linear-gradient(90deg, #2fd3f8, #22505a, #1a7ecff6);
   border-radius: 40px;
@@ -71,6 +77,103 @@
 }
 
 .main--btn:active {
-  background: linear-gradient(45deg, #2fd3f8, #22505a, #1a7ecff6);
+  background: linear-gradient(45deg, #6ab7c9, #22505a, #1a7ecff6);
   opacity: 0.9;
+}
+
+nav.nav--list {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.v--header {
+  width: 20vw;
+  background-color: #6ab7c9;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.home--splitter {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.nav--link {
+  color: aliceblue;
+  font-size: 1.6vw;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.nav--link:nth-of-type(1):hover,
+.nav--link:nth-of-type(2):hover,
+.nav--link:nth-of-type(3):hover,
+.nav--link:nth-of-type(4):hover {
+  background-color: #fff;
+  color: #22505a;
+}
+
+.home--main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80vw;
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.auth--title {
+  font-family: 'Play', sans-serif;
+  font-size: 4vw;
+  font-weight: 700;
+  margin-top: -5rem;
+  color: #22505a;
+}
+
+.home--main--content {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.main--text {
+  max-width: 50%;
+}
+
+.main--doc--content {
+  width: 100%;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.w--100 {
+  width: 100%;
+}
+
+.social-m {
+  color: #e9f8fc;
+}
+
+.social-m:hover {
+  color: #22505a;
+}
+
+.logout {
+  color: #e9f8fc;
+  font-size: 1.6vw;
+  padding: 3rem 2rem;
+  cursor: pointer;
 }
