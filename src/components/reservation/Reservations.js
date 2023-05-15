@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Container } from 'react-bootstrap';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { getReservations } from '../../redux/reservation/reservationsSlice';
 import baseUrl from '../../redux/base_url';
@@ -53,23 +54,25 @@ function Reservations() {
     );
   }
   if (loading === 'idle') {
-    content = data.map((reservation) => (
-      <div className="col-sm-6" key={reservation.id}>
-        <div className="card">
-          <div className="card-body">
-            <h5 className="card-title">
-              <GetDoctorName doctorId={reservation.doctor_id} />
-            </h5>
-            <h5 className="card-title">{reservation.city}</h5>
-            <p className="card-text">
-              {' '}
-              {reservation.appointment_date}
-              {' '}
-            </p>
-
-          </div>
-        </div>
-      </div>
+    content = data.map((reservation, index) => (
+      <tr key={reservation.id}>
+      <td>
+        { index + 1}
+        {' '}
+      </td>
+      <td>
+      <GetDoctorName doctorId={reservation.doctor_id} />
+        {' '}
+      </td>
+      <td>
+      {reservation.city}
+        {' '}
+      </td>
+      <td>
+      {reservation.appointment_date}
+        {' '}
+      </td>
+    </tr>
     ));
   }
   if (error !== null) {
@@ -79,7 +82,34 @@ function Reservations() {
       </div>
     );
   }
-  return <div className="row">{content}</div>;
+  return (
+    <>
+<Container className="content">
+  <div className="row">
+    <div className="col-sm-12">
+      <h2 className="mt-4 mb-4 fw-bold">
+        Reservations
+      </h2>
+      <form className="form w-100">
+        <table className="table">
+          <thead>
+            <tr>
+              <th>Res. No</th>
+              <th>Doctor Name</th>
+              <th>City</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+          {content}
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+</Container>
+</>
+  );
 }
 
 export default Reservations;
