@@ -75,10 +75,14 @@
 
 .doctor-info li:nth-child(even) {
   background: linear-gradient(0deg, rgba(10, 130, 146, 0.6), rgba(10, 116, 146, 0.6));
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
 .doctor-info li:nth-child(odd) {
   background: linear-gradient(0deg, rgba(30, 150, 156, 2.6), rgba(10, 106, 156, 0.6));
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
 .discover-more {
@@ -112,4 +116,27 @@
     width: 100%;
     flex-grow: 1;
   }
+}
+
+.doctor-submit-button {
+  margin-top: 1rem;
+  background: linear-gradient(90deg, #2fd3f8, #22505a, #1a7ecff6);
+  border-radius: 40px;
+  border: none;
+  font-weight: 800;
+  font-size: 2.5vh;
+  padding: 2% 5%;
+  color: #e9f8fc;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 10px 8px 8px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.doctor-submit-button:hover {
+  opacity: 0.7;
+}
+
+.doctor-submit-button:active {
+  background: linear-gradient(45deg, #2fd3f8, #22505a, #1a7ecff6);
+  opacity: 0.9;
 }

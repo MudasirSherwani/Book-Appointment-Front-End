@@ -44,6 +44,7 @@ const DetailsPage = () => {
   return (
     <div className="main-container">
       <img src={doctorbg} alt="doctor" className="doctor-bg" />
+      <div className='add-form-container'>
       <section className="details-container">
         <div className="doctor-image">
           <img id="myImage" src={doctor.image} className="d-doctor-image" alt="Doctor" />
@@ -67,7 +68,7 @@ const DetailsPage = () => {
               {doctor.city}
             </li>
           </ul>
-          <button type="button" onClick={handleAppointmentClick}>Appoint</button>
+          <button type="button"className='doctor-submit-button' onClick={handleAppointmentClick}>Appoint</button>
           <div className="link">
             <Link to="/" className="discover-more">
               Discover more doctors
@@ -76,6 +77,7 @@ const DetailsPage = () => {
           </div>
         </div>
       </section>
+    </div>
     </div>
   );
 };
