@@ -1,12 +1,12 @@
 
 <a name="readme-top"></a>
 <div align="center">
-    <img src="../Book-Appointment-Front-End/src/assets/logo.svg">
+    <img src="https://i.ibb.co/wS6QkrQ/logo.png">
 </div>
 
 <div align="center">
 
-  <h2><b>World Vision Clinic</b></h2>
+  <h1><b>World Vision Clinic</b></h2>
 
 </div>
 
@@ -41,6 +41,9 @@
 
 > This is a full-stack project. In which you can register yourself create a doctor, book an appointment
 with the doctor, see all appiontmnets, delete a doctor(s).
+
+### [World Vision Clinic API Repository link](https://github.com/MudasirSherwani/Book-an-Appointment)
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -79,11 +82,8 @@ with the doctor, see all appiontmnets, delete a doctor(s).
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link Comming Soon!]
-
-## Back-end repository link
-
-- <a href="https://github.com/MudasirSherwani/Book-an-Appointment" target="_blank">Rails Back-end</a>
+- [World Vision Clinic (Front-End)](https://world-vision-clinic.netlify.app/)
+- [World Vision Clinic (API)](https://appoint-doctor.onrender.com/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -144,25 +144,25 @@ To run the project, execute the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 **Zainab Al-Zubair**
+- GitHub: [Zainab Al-Zubair](https://github.com/Zainab-Alzubair)
+- LinkedIn: [Zainab Al-Zubair](https://www.linkedin.com/in/zainab-alzubair/)
+
 👤 **Abdul Saboor Sohaib**
 
 - GitHub: [![SaboorSohaib](https://img.shields.io/badge/-SaboorSohaib-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/SaboorSohaib)
 - Twitter: [![absaboorsohaib](https://img.shields.io/badge/-absaboorsohaib-blue?logo=Twitter&logoColor=skyBlue&style=plastic)](https://twitter.com/absaboorsohaib)
 - LinkedIn: [![abdul-saboor-sohaib](https://img.shields.io/badge/-AbdulSaboorSohaib-white?logo=LinkedIn&logoColor=181717&style=plastic)](https://www.linkedin.com/in/abdul-saboor-sohaib/)
 
-**Mudasir Sherwani**
+👤 **Mudasir Sherwani**
 - GitHub: [Mudasir Sherwani](https://github.com/MudasirSherwani)
 - Twitter: [Mudasir Ashraf Sherwani](https://twitter.com/mudasirsherwani)
 - LinkedIn: [Mudasir (Ashraf) Sherwani](https://linkedin.com/in/mudasir-sherwani)
 
-**Oluwatoyin Olaoye**
+👤 **Oluwatoyin Olaoye**
 - GitHub: [Olaoye Oluwatoyin Abayomi](https://github.com/abayomiolaoye)
 - Twitter: [Oluwatoyin](https://twitter.com/oloayeelijah)
 - LinkedIn: [Oluwatoyin (Abayomi) Olaoye](https://www.linkedin.com/in/oluwatoyinolaoye)
-
-**Zainab Al-Zubair**
-- GitHub: [Zainab Al-Zubair](https://github.com/Zainab-Alzubair)
-- LinkedIn: [Zainab Al-Zubair](https://www.linkedin.com/in/zainab-alzubair/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
