@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { getDoctorsThunk } from '../../redux/appointment/doctorsSlice';
 import './sohaib.css';
@@ -8,7 +9,8 @@ import baseUrl from '../../redux/base_url';
 
 const BookAppointment = () => {
   const dispatch = useDispatch();
-
+  const location = useLocation();
+  const fromDetailsDoctorID = new URLSearchParams(location.search).get('doctor_id');
   useEffect(() => {
     dispatch(getDoctorsThunk());
   }, [dispatch]);
@@ -21,7 +23,7 @@ const BookAppointment = () => {
   const [appointmentDate, setAppointmentDate] = useState('');
   const [appointmentTime, setAppointmentTime] = useState('');
   const [user, setUser] = useState(userId || 0);
-  const [doctor, setDoctor] = useState(doctorId || 0);
+  const [doctor, setDoctor] = useState(fromDetailsDoctorID || '0');
 
   const resetValues = () => {
     setDisease('');
