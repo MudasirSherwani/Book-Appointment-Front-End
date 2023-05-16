@@ -1,0 +1,22 @@
+
+tbody {
+  color: black;
+  font-weight: 500;
+}
+.title{
+  color: rgb(228, 233, 237);
+  display: flex;
+  justify-content: center;
+}
+thead {
+  color: black;
+  background: linear-gradient(90deg, #2fd3f8, #1a7ecff6);
+  font-size: larger;
+  font-weight: 700;
+}
+.table{
+  background: linear-gradient(269.52deg, #07aad2ef 0, #a3b3b1 98.86%);
+}
+tr{
+  border-top: none;
+}
