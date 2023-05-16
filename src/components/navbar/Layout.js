@@ -1,7 +1,7 @@
 import { FaSignOutAlt } from 'react-icons/fa';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 // import { CgMenuBoxed } from 'react-icons/cg';
 import { Logo } from '../home/LandingPage';
 import Button from '../button';
@@ -12,7 +12,7 @@ const Layout = () => {
   const redirect = useNavigate();
   const handleButtonClick = () => {
     dispatch(logout());
-    redirect('/login');
+    redirect('/');
   };
 
   return (
@@ -22,19 +22,18 @@ const Layout = () => {
         {/* <CgMenuBoxed className="menu--icon" /> */}
         <nav className="flex nav--list column hide--menu">
           <NavLink to="/" exact activeClassName="active" className="nav--link">Home</NavLink>
-          <NavLink to="/appointment/add" activeClassName="active" className="nav--link">New Reservation</NavLink>
+          <NavLink to="/book-appointment" activeClassName="active" className="nav--link">New Reservation</NavLink>
           {' '}
           <NavLink to="/add-doctor" activeClassName="active" className="nav--link">New Doctor</NavLink>
           <NavLink to="/delete-doctor" activeClassName="active" className="nav--link">Delete Doctor</NavLink>
           <NavLink to="/reservations/" activeClassName="active" className="nav--link">My Reservations</NavLink>
-          <NavLink to="/signout" activeClassName="active" className="nav--link">
-            <Button title="Sign Out" event={handleButtonClick} text=<FaSignOutAlt /> />
-          </NavLink>
+          <Button title="Sign Out" event={handleButtonClick} text=<FaSignOutAlt /> />
         </nav>
       </div>
       <small className="v--footer hidden">
         &copy; World Vision Clinic 2023
       </small>
+      <Outlet />
     </header>
   );
 };
