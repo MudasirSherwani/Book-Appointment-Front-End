@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { getDoctorsThunk } from '../../redux/appointment/doctorsSlice';
 import './sohaib.css';
-import doctorbg from '../../assets/backgrounds/doctorbg.jpg';
 import baseUrl from '../../redux/base_url';
 
 const BookAppointment = () => {
