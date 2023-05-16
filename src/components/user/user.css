@@ -1,0 +1,85 @@
+/* General */
+.container {
+  color: azure;
+}
+
+tbody {
+  color: #fff;
+}
+
+thead {
+  color: black;
+  background: linear-gradient(269.52deg, #ec008c 0, #f15b2a 98.86%);
+  font-size: larger;
+  font-weight: 700;
+}
+
+.welcome-page {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.add-new{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-title {
+  display: flex;
+  font-weight: 700;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.6rem;
+  color: rgb(25, 48, 70);
+  padding-bottom: 1rem;
+}
+.main--btn {
+  width: fit-content;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #2fd3f8, #22505a, #1a7ecff6);
+  border-radius: 40px;
+  border: none;
+  font-weight: 800;
+  font-size: 2vh;
+  padding: 1% 2%;
+  color: #e9f8fc;
+  cursor: pointer;
+  box-shadow: 10px 8px 8px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-container {
+  background: linear-gradient(269.52deg, #07aad2ef 0, #a3b3b1 98.86%);
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 3rem auto;
+  width: 500px;
+  max-width: 1400px;
+  padding: 3rem;
+}
+
+
+.input {
+  width: 250px;
+  height: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  margin: 7px 0;
+}
+
+/* Made with love by Mutiullah Samim */
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+/* Coded with love by Mutiullah Samim */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #0A7992 !important;
+}
