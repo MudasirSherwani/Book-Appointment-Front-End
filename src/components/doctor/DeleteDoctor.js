@@ -51,7 +51,7 @@ const DeleteDoctor = () => {
                     <th>Dr. No</th>
                     <th>Doctor Name</th>
                     <th>City</th>
-                    <th>speciality</th>
+                    <th>Speciality</th>
                     <th>Action</th>
                   </tr>
                 </thead>

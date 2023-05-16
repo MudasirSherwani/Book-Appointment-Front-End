@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import '../appointment/sohaib.css';
 import doctorbg from '../../assets/backgrounds/doctorbg.jpg';
 import baseUrl from '../../redux/base_url';
-import './doctors.css';
+import '../appointment/sohaib.css';
 
 function AddDoctor() {
   const [name, setName] = useState('');
