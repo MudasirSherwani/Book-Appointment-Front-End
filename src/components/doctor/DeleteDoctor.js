@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Container } from 'react-bootstrap';
 import { removeDoctor } from '../../redux/doctor/doctorSlice';
 import baseUrl from '../../redux/base_url';
-import '../reservation/reservation.css'
+import '../reservation/reservation.css';
 
 const DeleteDoctor = () => {
   const [doctors, setDoctors] = useState([]);

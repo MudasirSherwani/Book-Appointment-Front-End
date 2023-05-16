@@ -115,76 +115,76 @@ function AddDoctor() {
 
   return (
     <section className="add-doctor">
-         <img src={doctorbg} alt="doctor" className="doctor-bg" />
-         <div className='add-form-container'>
-    <div className='container'>
-      <form onSubmit={handleSubmit} className="doctor-form">
-        <h2 className="page-title">Add Doctor</h2>
-        <div className="form-group">
-          <input
-            type="text"
-            id="name-input"
-            className="doctor-input"
-            placeholder="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            data-testid="input-name"
-          />
-          {nameError && <span className="error">Name is required</span>}
+      <img src={doctorbg} alt="doctor" className="doctor-bg" />
+      <div className="add-form-container">
+        <div className="container">
+          <form onSubmit={handleSubmit} className="doctor-form">
+            <h2 className="page-title">Add Doctor</h2>
+            <div className="form-group">
+              <input
+                type="text"
+                id="name-input"
+                className="doctor-input"
+                placeholder="Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                data-testid="input-name"
+              />
+              {nameError && <span className="error">Name is required</span>}
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                id="city-input"
+                className="doctor-input"
+                placeholder="City"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                data-testid="input-city"
+              />
+              {cityError && <span className="error">City is required</span>}
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                id="description-input"
+                className="doctor-input"
+                placeholder="Description"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                data-testid="input-description"
+              />
+              {descriptionError && <span className="error">Description is required</span>}
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                id="speciality-input"
+                className="doctor-input"
+                placeholder="Speciality"
+                value={speciality}
+                onChange={(e) => setSpeciality(e.target.value)}
+                data-testid="input-speciality"
+              />
+              {specialityError && <span className="error">Speciality is required</span>}
+            </div>
+            <div className="form-group image-field">
+              <input
+                type="file"
+                id="image-input"
+                className="doctor-input"
+                onChange={handleImageUpload}
+                data-testid="input-image"
+              />
+              {imageError && <span className="error">Image is required</span>}
+            </div>
+            <div>
+              <button type="submit" data-testid="button-submit" className="doctor-submit-button">
+                Add Doctor
+              </button>
+            </div>
+          </form>
         </div>
-        <div className="form-group">
-          <input
-            type="text"
-            id="city-input"
-            className="doctor-input"
-            placeholder="City"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-            data-testid="input-city"
-          />
-          {cityError && <span className="error">City is required</span>}
-        </div>
-        <div className="form-group">
-          <input
-            type="text"
-            id="description-input"
-            className="doctor-input"
-            placeholder="Description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            data-testid="input-description"
-          />
-          {descriptionError && <span className="error">Description is required</span>}
-        </div>
-        <div className="form-group">
-          <input
-            type="text"
-            id="speciality-input"
-            className="doctor-input"
-            placeholder="Speciality"
-            value={speciality}
-            onChange={(e) => setSpeciality(e.target.value)}
-            data-testid="input-speciality"
-          />
-          {specialityError && <span className="error">Speciality is required</span>}
-        </div>
-        <div className="form-group image-field">
-          <input
-            type="file"
-            id="image-input"
-            className="doctor-input"
-            onChange={handleImageUpload}
-            data-testid="input-image"
-          />
-          {imageError && <span className="error">Image is required</span>}
-        </div>
-        <div>
-          <button type="submit" data-testid="button-submit" className="doctor-submit-button">
-            Add Doctor
-          </button>
-        </div>
-      </form>
-      </div>
       </div>
     </section>
   );
