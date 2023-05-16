@@ -20,6 +20,7 @@ const LoginForm = () => {
       password,
     };
     await dispatch(login(reqBody));
+    // navigate('/home');
   };
 
   return (

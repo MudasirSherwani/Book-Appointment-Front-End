@@ -1,0 +1,24 @@
+.card {
+  border-radius: 39% 61% 65% 35% / 73% 53% 47% 27%;
+  background: rgba(34, 80, 90, 0.25);
+  border: none;
+}
+
+.spinner {
+  width: 10vmin;
+  height: 10vmin;
+}
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.finder {
+  color: rgb(34, 80, 90);
+  font-size: 4vw;
+}
+
+/* Doctor's Details Page */
