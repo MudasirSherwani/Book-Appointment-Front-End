@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { React, useEffect, useState } from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import baseUrl from '../../redux/base_url';
+import './doctorDetails.css';
+import doctorbg from '../../assets/backgrounds/doctorbg.jpg';
 
 const DetailsPage = () => {
   const { id } = useParams();
   const [doctor, setDoctor] = useState(null);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const token = localStorage.getItem('token');
     const fetchDoctor = async () => {
@@ -25,7 +28,7 @@ const DetailsPage = () => {
         const data = await response.json();
         setDoctor(data);
       } catch (error) {
-        throw new Error(error.message);
+        toast.error(error);
       }
     };
     fetchDoctor();
@@ -35,44 +38,42 @@ const DetailsPage = () => {
     return <div>Loading...</div>;
   }
 
+  const handleAppointmentClick = () => {
+    navigate(`/book-appointment?doctor_id=${doctor.id}`);
+  };
   return (
-    <div className="main-holder">
-      <section className="details-holder">
-        <div>
-          <img id="myImage" src={doctor.image} className="d-doctor-image" alt="img" />
+    <div className="main-container">
+      <img src={doctorbg} alt="doctor" className="doctor-bg" />
+      <section className="details-container">
+        <div className="doctor-image">
+          <img id="myImage" src={doctor.image} className="d-doctor-image" alt="Doctor" />
         </div>
         <div className="doctor-info">
+          <h1 className="name">{doctor.name}</h1>
           <ul>
-            <li className="-info">
-              NAME:
+            <li className="speciality">
+              <span>SPECIALITY:</span>
               {' '}
-              <span>{doctor.name}</span>
+              {doctor.speciality}
             </li>
-            <li className="-info">
-              SPECIALITY:
+            <li className="description">
+              <span>DESCRIPTION:</span>
               {' '}
-              <span>{doctor.speciality}</span>
+              {doctor.description}
             </li>
-            <li className="-info">
-              DISCRIPTION:
+            <li className="city">
+              <span>CITY:</span>
               {' '}
-              <span>{doctor.description}</span>
+              {doctor.city}
             </li>
-            <li className="-info">
-              CITY:
-              {' '}
-              <span>{doctor.city}</span>
-            </li>
-            <li className="-info">
-              <button type="button">Appoint </button>
-            </li>
-            <div className="link">
-              <Link to="/" className="discover">
-                Discover more doctors
-                {' '}
-              </Link>
-            </div>
           </ul>
+          <button type="button" onClick={handleAppointmentClick}>Appoint</button>
+          <div className="link">
+            <Link to="/" className="discover-more">
+              Discover more doctors
+              {' '}
+            </Link>
+          </div>
         </div>
       </section>
     </div>

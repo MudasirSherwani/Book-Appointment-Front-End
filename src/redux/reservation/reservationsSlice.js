@@ -1,13 +1,21 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import baseUrl from '../base_url';
 
 export const getReservations = createAsyncThunk('reservations/getReservations',
   async () => {
-    const userid = JSON.parse(window.localStorage.getItem('user_id'));
-    const response = await axios.get(`http://127.0.0.1:1800/users/${userid}/appointments`);
+    const token = localStorage.getItem('token');
+    const userId = JSON.parse(window.localStorage.getItem('user_id'));
+    const response = await axios.get(`${baseUrl}users/${userId}/appointments/`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+    });
     return response.data;
   });
+
 export const reservationsSlice = createSlice({
   name: 'reservations',
   initialState: {
