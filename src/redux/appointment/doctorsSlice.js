@@ -1,5 +1,6 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
 import axios from 'axios';
 import baseUrl from '../base_url';
 
@@ -15,7 +16,7 @@ export const getDoctorsThunk = createAsyncThunk('doctor/getDoctorsThunk', async 
     const data = response.data ?? [];
     return data;
   } catch (error) {
-    console.error(error);
+    toast.error(error);
     throw new Error('Failed to fetch doctors');
   }
 });
