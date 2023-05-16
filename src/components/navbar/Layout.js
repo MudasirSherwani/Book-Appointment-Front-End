@@ -26,7 +26,7 @@ const Layout = () => {
           {' '}
           <NavLink to="/add-doctor" activeClassName="active" className="nav--link">New Doctor</NavLink>
           <NavLink to="/delete-doctor" activeClassName="active" className="nav--link">Delete Doctor</NavLink>
-          <NavLink to="/reservations/" activeClassName="active" className="nav--link">My Reservations</NavLink>
+          <NavLink to="/reservations/" activeClassName="active" className="nav--link">My Appointments</NavLink>
           <Button title="Sign Out" event={handleButtonClick} text=<FaSignOutAlt /> />
         </nav>
       </div>

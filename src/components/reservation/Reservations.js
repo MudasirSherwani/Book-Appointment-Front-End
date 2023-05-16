@@ -89,7 +89,7 @@ function Reservations() {
         <div className="row display-table">
           <div className="col-sm-12">
             <h2 className="mt-4 mb-4 fw-bold title">
-              Reservations
+              Appointments
             </h2>
             <form className="form w-100">
               <table className="table">

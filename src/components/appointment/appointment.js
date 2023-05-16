@@ -104,7 +104,7 @@ const BookAppointment = () => {
       <div className="form-container">
         <h2 className="page-title">Book Doctor Appiontment</h2>
         <form className="reserve-form">
-          <h4 className="form-title">Fill In The Form To Book an Appiontment</h4>
+          <p className="form-title">Fill In The Form To Book an Appiontment</p>
           <div className="form-group">
             <select name="doctor" value={doctor} onChange={handleFieldChange} className="appoint-input select">
               <option value="0" className="doctor-option">Select Doctor</option>
