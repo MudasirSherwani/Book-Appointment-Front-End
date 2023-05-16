@@ -1,7 +1,4 @@
 .card {
-  /* border-radius: 39% 61% 65% 35% / 73% 53% 47% 27%; */
-
-  /* border-radius: 50%; */
   background: rgba(177, 214, 214, 0.25);
   border: none;
   z-index: 5;
@@ -20,8 +17,11 @@
 }
 
 .loader {
-  width: 100vw;
+  width: 80vw;
   height: 100vh;
+  position: fixed;
+  left: 20vw;
+  background: #fff;
   justify-content: center;
   align-items: center;
 }

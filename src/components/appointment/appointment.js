@@ -64,11 +64,12 @@ const BookAppointment = () => {
     e.preventDefault();
     try {
       const response = await createAppointment();
-      console.log(response);
+      if (!response) {
+        throw new Error('Failed to create appointment');
+      }
       toast.success('Appointment created successfully');
       resetValues();
     } catch (error) {
-      console.error(error);
       toast.error('Failed to create appointment');
     }
   };

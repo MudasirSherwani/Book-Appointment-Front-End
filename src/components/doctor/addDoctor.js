@@ -33,10 +33,8 @@ function AddDoctor() {
       body.style.cursor = 'wait';
       const response = await axios.post('https://api.imgbb.com/1/upload?key=8b33c005b4494d49345774dd0cde37db', formData);
       setImage(response.data.data.url);
-      console.log(response.data.data.url);
     } catch (error) {
       body.style.cursor = 'default';
-      console.log(error);
     } finally {
       body.style.cursor = 'default';
     }
