@@ -104,69 +104,69 @@ const BookAppointment = () => {
     <section className="add-appiontment">
       <img src={doctorbg} alt="doctor" className="doctor-bg" />
       <div className="add-form-container">
-      <h2 className="page-title">Book Doctor Appiontment</h2>
-      <form className="reserve-form">
-        <h4 className="form-title">Fill In The Form To Book an Appiontment</h4>
-        <div className="form-group">
-          <select name="doctor" value={doctor} onChange={handleFieldChange} className="appoint-input select">
-            <option value="0" className="doctor-option">Select Doctor</option>
-            {myDoctors && myDoctors.map((doctor) => (
-              <option key={doctor.id} value={doctor.id}>{doctor.name}</option>
-            ))}
-          </select>
-        </div>
-        <div className="form-group">
-          <input
-            type="text"
-            id="disease"
-            className="doctor-input"
-            placeholder="Enter Your Disease"
-            value={disease}
-            onChange={handleFieldChange}
-            name="disease"
-            data-testid="input-disease"
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="text"
-            id="city"
-            className="doctor-input"
-            placeholder="Enter Your Address"
-            value={city}
-            onChange={handleFieldChange}
-            name="city"
-            data-testid="input-city"
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="date"
-            id="date"
-            className="doctor-input select"
-            placeholder="date"
-            value={appointmentDate}
-            onChange={handleFieldChange}
-            name="appointmentDate"
-            data-testid="input-date"
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="time"
-            id="time"
-            className="doctor-input select"
-            placeholder="time for appiontment"
-            value={appointmentTime}
-            onChange={handleFieldChange}
-            name="appointmentTime"
-            data-testid="input-time"
-          />
-        </div>
-        <div>
-          <button type="submit" data-testid="button" className="doctor-submit-button" onClick={handleSubmit}>Book Appiontment</button>
-        </div>
-      </form>
+        <h2 className="page-title">Book Doctor Appiontment</h2>
+        <form className="reserve-form">
+          <h4 className="form-title">Fill In The Form To Book an Appiontment</h4>
+          <div className="form-group">
+            <select name="doctor" value={doctor} onChange={handleFieldChange} className="appoint-input select">
+              <option value="0" className="doctor-option">Select Doctor</option>
+              {myDoctors && myDoctors.map((doctor) => (
+                <option key={doctor.id} value={doctor.id}>{doctor.name}</option>
+              ))}
+            </select>
+          </div>
+          <div className="form-group">
+            <input
+              type="text"
+              id="disease"
+              className="doctor-input"
+              placeholder="Enter Your Disease"
+              value={disease}
+              onChange={handleFieldChange}
+              name="disease"
+              data-testid="input-disease"
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="text"
+              id="city"
+              className="doctor-input"
+              placeholder="Enter Your Address"
+              value={city}
+              onChange={handleFieldChange}
+              name="city"
+              data-testid="input-city"
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="date"
+              id="date"
+              className="doctor-input select"
+              placeholder="date"
+              value={appointmentDate}
+              onChange={handleFieldChange}
+              name="appointmentDate"
+              data-testid="input-date"
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="time"
+              id="time"
+              className="doctor-input select"
+              placeholder="time for appiontment"
+              value={appointmentTime}
+              onChange={handleFieldChange}
+              name="appointmentTime"
+              data-testid="input-time"
+            />
+          </div>
+          <div>
+            <button type="submit" data-testid="button" className="doctor-submit-button" onClick={handleSubmit}>Book Appiontment</button>
+          </div>
+        </form>
       </div>
     </section>
   );
