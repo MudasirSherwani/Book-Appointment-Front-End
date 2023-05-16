@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { getDoctorsThunk } from '../../redux/appointment/doctorsSlice';
 import './sohaib.css';
@@ -8,20 +9,21 @@ import baseUrl from '../../redux/base_url';
 
 const BookAppointment = () => {
   const dispatch = useDispatch();
-
+  const location = useLocation();
+  const fromDetailsDoctorID = new URLSearchParams(location.search).get('doctor_id');
   useEffect(() => {
     dispatch(getDoctorsThunk());
   }, [dispatch]);
 
-  const { doctors } = useSelector((state) => state.doctors);
-  const doctorId = doctors[0];
+  const { myDoctors } = useSelector((state) => state.myDoctors);
+  const doctorId = myDoctors[0];
   const userId = JSON.parse(window.localStorage.getItem('user_id'));
   const [disease, setDisease] = useState('');
   const [city, setCity] = useState('');
   const [appointmentDate, setAppointmentDate] = useState('');
   const [appointmentTime, setAppointmentTime] = useState('');
   const [user, setUser] = useState(userId || 0);
-  const [doctor, setDoctor] = useState(doctorId || 0);
+  const [doctor, setDoctor] = useState(fromDetailsDoctorID || '0');
 
   const resetValues = () => {
     setDisease('');
@@ -109,7 +111,7 @@ const BookAppointment = () => {
           <br />
           <select name="doctor" value={doctor} onChange={handleFieldChange} className="appoint-input select">
             <option value="0" className="doctor-option">Select Doctor</option>
-            {doctors && doctors.map((doctor) => (
+            {myDoctors && myDoctors.map((doctor) => (
               <option key={doctor.id} value={doctor.id}>{doctor.name}</option>
             ))}
           </select>
