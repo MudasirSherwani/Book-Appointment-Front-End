@@ -48,7 +48,7 @@ const LoginForm = () => {
         </Form.Group>
         <Button variant="primary" type="submit" className="main--btn">Login</Button>
         <div className="welcome-page">
-          <h5 className='add-new'>Create New Account</h5>
+          <h5 className="add-new">Create New Account</h5>
           <Button variant="white" type="button" className="main--btn" onClick={() => navigate('/signup')}>
             Sign up
           </Button>

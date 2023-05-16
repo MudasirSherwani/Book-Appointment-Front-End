@@ -108,7 +108,7 @@ const SignupForm = () => {
         </Form.Group>
         <Button variant="primary" type="submit" className="main--btn">Create</Button>
         <div className="welcome-page">
-          <p className='add-new'>Already have an account? Click here to Log in</p>
+          <p className="add-new">Already have an account? Click here to Log in</p>
           <Button variant="white" type="button" className="main--btn" onClick={() => navigate('/login')}>
             Login
           </Button>
