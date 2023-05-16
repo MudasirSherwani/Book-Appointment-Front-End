@@ -31,7 +31,7 @@ function Reservations() {
           const data = await response.json();
           setDoctor(data);
         } catch (error) {
-          console.error(error);
+          throw new Error(error.message);
         }
       };
 
