@@ -22,11 +22,11 @@ const Layout = () => {
         {/* <CgMenuBoxed className="menu--icon" /> */}
         <nav className="flex nav--list column hide--menu">
           <NavLink to="/" exact activeClassName="active" className="nav--link">Home</NavLink>
-          <NavLink to="/book-appointment" activeClassName="active" className="nav--link">New Reservation</NavLink>
+          <NavLink to="/book-appointment" activeClassName="active" className="nav--link">New Appointment</NavLink>
           {' '}
           <NavLink to="/add-doctor" activeClassName="active" className="nav--link">New Doctor</NavLink>
           <NavLink to="/delete-doctor" activeClassName="active" className="nav--link">Delete Doctor</NavLink>
-          <NavLink to="/reservations/" activeClassName="active" className="nav--link">My Reservations</NavLink>
+          <NavLink to="/reservations/" activeClassName="active" className="nav--link">My Appointments</NavLink>
           <Button title="Sign Out" event={handleButtonClick} text=<FaSignOutAlt /> />
         </nav>
       </div>
