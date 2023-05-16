@@ -1,17 +1,9 @@
 /* General */
-.container {
-  color: azure;
-}
-
-tbody {
-  color: #fff;
-}
-
-thead {
-  color: black;
-  background: linear-gradient(269.52deg, #ec008c 0, #f15b2a 98.86%);
-  font-size: larger;
-  font-weight: 700;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #0a7992 !important;
 }
 
 .welcome-page {
@@ -21,7 +13,8 @@ thead {
   align-items: center;
   gap: 10px;
 }
-.add-new{
+
+.add-new {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -36,6 +29,7 @@ thead {
   color: rgb(25, 48, 70);
   padding-bottom: 1rem;
 }
+
 .main--btn {
   width: fit-content;
   margin-top: 1rem;
@@ -61,25 +55,10 @@ thead {
   padding: 3rem;
 }
 
-
 .input {
   width: 250px;
   height: 25px;
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   margin: 7px 0;
-}
-
-/* Made with love by Mutiullah Samim */
-
-@import url('https://fonts.googleapis.com/css?family=Numans');
-
-/* Coded with love by Mutiullah Samim */
-
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background: #0A7992 !important;
 }
