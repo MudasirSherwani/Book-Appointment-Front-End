@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import Carousel from 'react-multi-carousel';
+import { Spinner } from 'react-bootstrap';
 import Layout from '../navbar/Layout';
 import Doctor from '../doctor/Doctor';
 import baseUrl from '../../redux/base_url';
 import configure from '../doctor/config';
+import Loading from '../Loading';
 
 const Homepage = () => {
   const [doctors, setDoctor] = useState(null);
@@ -34,7 +36,7 @@ const Homepage = () => {
     fetchDoctor();
   }, []);
   if (!doctors) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   return (
@@ -51,6 +53,7 @@ const Homepage = () => {
         <div className="main--doc--content flex">
           <Carousel
             autoPlay
+            autoPlaySpeed={5000}
             infinite
             showArrows
             showDots
@@ -58,9 +61,16 @@ const Homepage = () => {
             keyBoardControl
             responsive={configure([3, 2, 1])}
           >
-            {doctors.map((doctor) => (
-              <Doctor key={doctor.id} doctor={doctor} />
-            ))}
+            {doctors.length > 0
+              ? doctors.map((doctor) => (
+                <Doctor key={doctor.id} doctor={doctor} />
+              ))
+              : (
+                <div className="flex justify-content-center align-items-center">
+                  <Spinner animation="grow" variant="muted" className="d-block" />
+                  No Doctors at the moment...
+                </div>
+              )}
           </Carousel>
         </div>
       </main>

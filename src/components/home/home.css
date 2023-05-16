@@ -15,7 +15,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .main--logo {
-    animation: main--logo-spin infinite 60s linear;
+    animation: main--logo-spin infinite 20s linear;
   }
 }
 
@@ -56,12 +56,12 @@
 .main--btn {
   width: auto;
   margin-top: 1rem;
-  background: linear-gradient(90deg, #2fd3f8, #22505a, #1a7ecff6);
+  background: linear-gradient(90deg, #2fd3f8, #22505a);
   border-radius: 40px;
   border: none;
   font-weight: 800;
-  font-size: 3vh;
-  padding: 2% 5%;
+  font-size: 2vh;
+  padding: 2% 15%;
   color: #e9f8fc;
   cursor: pointer;
   box-shadow: 10px 8px 8px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -108,6 +108,7 @@ nav.nav--list {
 .nav--link {
   color: aliceblue;
   font-size: 1.6vw;
+  font-weight: 500;
   padding: 0.5rem 1rem;
   width: 100%;
 }
@@ -159,11 +160,11 @@ nav.nav--list {
 }
 
 .social-m {
-  color: #e9f8fc;
+  color: #22505a;
 }
 
 .social-m:hover {
-  color: #6ab7c9;
+  color: #062f38;
 }
 
 .logout {
