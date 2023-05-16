@@ -42,9 +42,9 @@ const SignupForm = () => {
   }, [success, navigate]);
 
   return (
-    <div className="form-cont">
+    <div className="form-container">
       <Form className="login-form" onSubmit={handleSubmit}>
-        <h1 className="sidebar-title-signup pt-3 ml-5">Appoint Doctor</h1>
+        <h1 className="form-title">Book A Doctor</h1>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Control
             type="name"
@@ -106,10 +106,10 @@ const SignupForm = () => {
             required
           />
         </Form.Group>
-        <Button variant="primary" type="submit">Create</Button>
-        <div className="d-flex account">
-          <p>Already have an account? Click here to Log in</p>
-          <Button variant="white" type="button" className="btn plain-btn" onClick={() => navigate('/login')}>
+        <Button variant="primary" type="submit" className="main--btn">Create</Button>
+        <div className="welcome-page">
+          <p className="add-new">Already have an account? Click here to Log in</p>
+          <Button variant="white" type="button" className="main--btn" onClick={() => navigate('/login')}>
             Login
           </Button>
         </div>

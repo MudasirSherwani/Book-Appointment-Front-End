@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { getReservations } from '../../redux/reservation/reservationsSlice';
 import baseUrl from '../../redux/base_url';
+import './reservation.css';
 
 function Reservations() {
   const dispatch = useDispatch();
@@ -87,7 +88,7 @@ function Reservations() {
       <Container className="content">
         <div className="row">
           <div className="col-sm-12">
-            <h2 className="mt-4 mb-4 fw-bold">
+            <h2 className="mt-4 mb-4 fw-bold title">
               Reservations
             </h2>
             <form className="form w-100">

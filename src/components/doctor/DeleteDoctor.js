@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Container } from 'react-bootstrap';
 import { removeDoctor } from '../../redux/doctor/doctorSlice';
 import baseUrl from '../../redux/base_url';
+import '../reservation/reservation.css';
 
 const DeleteDoctor = () => {
   const [doctors, setDoctors] = useState([]);
@@ -40,8 +41,8 @@ const DeleteDoctor = () => {
       <Container className="content">
         <div className="row">
           <div className="col-sm-12">
-            <h2 className="mt-4 mb-4 fw-bold">
-              Delete a Doctor
+            <h2 className="mt-4 mb-4 fw-bold title">
+              Delete A Doctor
             </h2>
             <form className="form w-100">
               <table className="table">
@@ -50,7 +51,7 @@ const DeleteDoctor = () => {
                     <th>Dr. No</th>
                     <th>Doctor Name</th>
                     <th>City</th>
-                    <th>speciality</th>
+                    <th>Speciality</th>
                     <th>Action</th>
                   </tr>
                 </thead>

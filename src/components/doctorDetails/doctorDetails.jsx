@@ -44,38 +44,40 @@ const DetailsPage = () => {
   return (
     <div className="main-container">
       <img src={doctorbg} alt="doctor" className="doctor-bg" />
-      <section className="details-container">
-        <div className="doctor-image">
-          <img id="myImage" src={doctor.image} className="d-doctor-image" alt="Doctor" />
-        </div>
-        <div className="doctor-info">
-          <h1 className="name">{doctor.name}</h1>
-          <ul>
-            <li className="speciality">
-              <span>SPECIALITY:</span>
-              {' '}
-              {doctor.speciality}
-            </li>
-            <li className="description">
-              <span>DESCRIPTION:</span>
-              {' '}
-              {doctor.description}
-            </li>
-            <li className="city">
-              <span>CITY:</span>
-              {' '}
-              {doctor.city}
-            </li>
-          </ul>
-          <button type="button" onClick={handleAppointmentClick}>Appoint</button>
-          <div className="link">
-            <Link to="/" className="discover-more">
-              Discover more doctors
-              {' '}
-            </Link>
+      <div className="add-form-container">
+        <section className="details-container">
+          <div className="doctor-image">
+            <img id="myImage" src={doctor.image} className="d-doctor-image" alt="Doctor" />
           </div>
-        </div>
-      </section>
+          <div className="doctor-info">
+            <h1 className="name">{doctor.name}</h1>
+            <ul>
+              <li className="speciality">
+                <span>SPECIALITY:</span>
+                {' '}
+                {doctor.speciality}
+              </li>
+              <li className="description">
+                <span>DESCRIPTION:</span>
+                {' '}
+                {doctor.description}
+              </li>
+              <li className="city">
+                <span>CITY:</span>
+                {' '}
+                {doctor.city}
+              </li>
+            </ul>
+            <button type="button" className="doctor-submit-button" onClick={handleAppointmentClick}>Appoint</button>
+            <div className="link">
+              <Link to="/" className="discover-more">
+                Discover more doctors
+                {' '}
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };

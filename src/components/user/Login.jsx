@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import { useDispatch } from 'react-redux';
 import { login } from '../../redux/user/auth';
+import './user.css';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -24,9 +25,9 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="form-cont">
+    <div className="form-container">
       <Form className="login-form" onSubmit={handleSubmit}>
-        <h1 className="sidebar-title-signup pt-3 ml-5">Appoint Doctor </h1>
+        <h1 className="form-title">Book Appointment</h1>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Control
             type="email"
@@ -46,10 +47,10 @@ const LoginForm = () => {
             required
           />
         </Form.Group>
-        <Button variant="primary" type="submit">Login</Button>
-        <div className="d-flex account">
-          <p>Create New Account</p>
-          <Button variant="white" type="button" className="btn plain-btn" onClick={() => navigate('/signup')}>
+        <Button variant="primary" type="submit" className="main--btn">Login</Button>
+        <div className="welcome-page">
+          <h5 className="add-new">Create New Account</h5>
+          <Button variant="white" type="button" className="main--btn" onClick={() => navigate('/signup')}>
             Sign up
           </Button>
         </div>
