@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import Carousel from 'react-multi-carousel';
 import { Spinner } from 'react-bootstrap';
-import Layout from '../navbar/Layout';
 import Doctor from '../doctor/Doctor';
 import baseUrl from '../../redux/base_url';
 import configure from '../doctor/config';
@@ -41,7 +39,6 @@ const Homepage = () => {
 
   return (
     <div className="home--splitter flex">
-      <Layout />
       <main className="home--main">
         <div className="home--main--content flex column">
           <h1 className="main--header auth--title m-1">Welcome to World Vision Clinic</h1>

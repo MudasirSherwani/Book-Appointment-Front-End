@@ -3,7 +3,6 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import baseUrl from '../../redux/base_url';
 import './doctorDetails.css';
-import doctorbg from '../../assets/backgrounds/doctorbg.jpg';
 
 const DetailsPage = () => {
   const { id } = useParams();
@@ -42,9 +41,8 @@ const DetailsPage = () => {
     navigate(`/book-appointment?doctor_id=${doctor.id}`);
   };
   return (
-    <div className="main-container">
-      <img src={doctorbg} alt="doctor" className="doctor-bg" />
-      <div className="add-form-container">
+    <div className="content home--splitter flex">
+      <div className="form-container">
         <section className="details-container">
           <div className="doctor-image">
             <img id="myImage" src={doctor.image} className="d-doctor-image" alt="Doctor" />

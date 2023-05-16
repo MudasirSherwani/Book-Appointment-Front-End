@@ -48,15 +48,22 @@
 .welcome--page {
   margin: auto;
   padding: 9rem 4rem;
+  align-items: center;
   width: 100%;
   height: inherit;
-  text-align: center;
+}
+
+.welcome--page button,
+nav.nav--list button {
+  max-width: 30vw;
+  padding: 1rem 2rem;
+  align-self: center;
 }
 
 .main--btn {
   width: auto;
   margin-top: 1rem;
-  background: linear-gradient(90deg, #2fd3f8, #22505a);
+  background: linear-gradient(90deg, #2fd3f8, #4ebbd3);
   border-radius: 40px;
   border: none;
   font-weight: 800;
@@ -92,6 +99,7 @@ nav.nav--list {
 
 .v--header {
   width: 20vw;
+  height: 100vh;
   background-color: #6ab7c9;
   align-items: center;
   justify-content: center;
@@ -99,13 +107,16 @@ nav.nav--list {
 }
 
 .home--splitter {
-  width: 100vw;
+  left: 20vw;
+  position: fixed;
+  width: 80vw;
   height: 100vh;
   background-color: #f5f5f5;
   overflow: hidden;
 }
 
-.nav--link {
+.nav--link,
+.active {
   color: aliceblue;
   font-size: 1.6vw;
   font-weight: 500;
@@ -113,10 +124,7 @@ nav.nav--list {
   width: 100%;
 }
 
-.nav--link:nth-of-type(1):hover,
-.nav--link:nth-of-type(2):hover,
-.nav--link:nth-of-type(3):hover,
-.nav--link:nth-of-type(4):hover {
+.nav--link:hover {
   background-color: #fff;
   color: #22505a;
 }

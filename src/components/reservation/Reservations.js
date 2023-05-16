@@ -31,7 +31,7 @@ function Reservations() {
           const data = await response.json();
           setDoctor(data);
         } catch (error) {
-          console.error(error);
+          throw new Error(error.message);
         }
       };
 
@@ -85,11 +85,11 @@ function Reservations() {
   }
   return (
     <>
-      <Container className="content">
-        <div className="row">
+      <Container className="content home--splitter flex">
+        <div className="row display-table">
           <div className="col-sm-12">
             <h2 className="mt-4 mb-4 fw-bold title">
-              Reservations
+              Appointments
             </h2>
             <form className="form w-100">
               <table className="table">

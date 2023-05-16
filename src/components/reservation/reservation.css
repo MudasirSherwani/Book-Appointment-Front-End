@@ -24,3 +24,11 @@ thead {
 tr {
   border-top: none;
 }
+
+.content {
+  background-color: #0a7992;
+}
+
+.display-table {
+  width: 100%;
+}

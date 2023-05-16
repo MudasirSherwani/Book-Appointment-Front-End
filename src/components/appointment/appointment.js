@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { getDoctorsThunk } from '../../redux/appointment/doctorsSlice';
 import './sohaib.css';
-import doctorbg from '../../assets/backgrounds/doctorbg.jpg';
 import baseUrl from '../../redux/base_url';
 
 const BookAppointment = () => {
@@ -65,11 +64,12 @@ const BookAppointment = () => {
     e.preventDefault();
     try {
       const response = await createAppointment();
-      console.log(response);
+      if (!response) {
+        throw new Error('Failed to create appointment');
+      }
       toast.success('Appointment created successfully');
       resetValues();
     } catch (error) {
-      console.error(error);
       toast.error('Failed to create appointment');
     }
   };
@@ -101,12 +101,11 @@ const BookAppointment = () => {
   };
 
   return (
-    <section className="add-appiontment">
-      <img src={doctorbg} alt="doctor" className="doctor-bg" />
-      <div className="add-form-container">
+    <section className="content home--splitter flex">
+      <div className="form-container">
         <h2 className="page-title">Book Doctor Appiontment</h2>
         <form className="reserve-form">
-          <h4 className="form-title">Fill In The Form To Book an Appiontment</h4>
+          <p className="form-title">Fill In The Form To Book an Appiontment</p>
           <div className="form-group">
             <select name="doctor" value={doctor} onChange={handleFieldChange} className="appoint-input select">
               <option value="0" className="doctor-option">Select Doctor</option>

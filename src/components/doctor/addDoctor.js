@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import '../appointment/sohaib.css';
-import doctorbg from '../../assets/backgrounds/doctorbg.jpg';
 import baseUrl from '../../redux/base_url';
 
 function AddDoctor() {
@@ -34,10 +33,8 @@ function AddDoctor() {
       body.style.cursor = 'wait';
       const response = await axios.post('https://api.imgbb.com/1/upload?key=8b33c005b4494d49345774dd0cde37db', formData);
       setImage(response.data.data.url);
-      console.log(response.data.data.url);
     } catch (error) {
       body.style.cursor = 'default';
-      console.log(error);
     } finally {
       body.style.cursor = 'default';
     }
@@ -113,9 +110,8 @@ function AddDoctor() {
   };
 
   return (
-    <section className="add-doctor">
-      <img src={doctorbg} alt="doctor" className="doctor-bg" />
-      <div className="add-form-container">
+    <section className="content home--splitter flex">
+      <div className="form-container">
         <div className="container">
           <form onSubmit={handleSubmit} className="doctor-form">
             <h2 className="page-title">Add Doctor</h2>

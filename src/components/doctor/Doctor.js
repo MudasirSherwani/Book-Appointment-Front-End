@@ -49,7 +49,7 @@ const Doctor = (doctor) => {
   return (
     <article className="doctor--card" id={doc}>
       <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={image && image.url} />
+        <Card.Img variant="top" src={image && image} className="img--card" />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted d-flex column">
