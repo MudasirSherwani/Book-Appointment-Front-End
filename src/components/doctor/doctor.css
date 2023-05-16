@@ -22,22 +22,3 @@
 }
 
 /* Doctor's Details Page */
-
-.main-holder {
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(90deg, rgba(10, 121, 146, 0.3), rgba(204, 229, 235, 0.6));
-}
-
-.d-doctor-image {
-  max-width: 25vmin;
-  border-radius: 50%;
-}
-
-.details-holder {
-  height: inherit;
-}
-
-.d-doctor-image:hover {
-  opacity: 0.7;
-}

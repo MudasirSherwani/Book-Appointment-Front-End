@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import baseUrl from '../../redux/base_url';
-import Loading from '../Loading';
-import '../doctor/doctor.css';
-import Button from '../button';
 
 const DetailsPage = () => {
   const { id } = useParams();
   const [doctor, setDoctor] = useState(null);
-
-  const handleButtonClick = async () => {
-    console.log('clicked - new reservation');
-  };
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -39,42 +32,42 @@ const DetailsPage = () => {
   }, [id]);
 
   if (!doctor) {
-    return <Loading />;
+    return <div>Loading...</div>;
   }
 
   return (
     <div className="main-holder">
-      <section className="card details-holder container-fluid d-flex column justify-content-center align-items-center ms-auto">
+      <section className="details-holder">
         <div>
-          <img id="myImage" src={doctor.image} className="card-img-top mb-2 d-doctor-image rounded" alt="img" />
+          <img id="myImage" src={doctor.image} className="d-doctor-image" alt="img" />
         </div>
         <div className="doctor-info">
-          <ul className="card-body d-flex column gap-2 justify-content-center align-items-center text-white">
-            <li className="-info card-title h4">
-              Name:
+          <ul>
+            <li className="-info">
+              NAME:
               {' '}
               <span>{doctor.name}</span>
             </li>
-            <li className="-info card-title h4">
-              Speciality:
+            <li className="-info">
+              SPECIALITY:
               {' '}
               <span>{doctor.speciality}</span>
             </li>
-            <li className="-info card-title h4">
-              Description:
+            <li className="-info">
+              DISCRIPTION:
               {' '}
               <span>{doctor.description}</span>
             </li>
-            <li className="-info card-title h4">
-              City:
+            <li className="-info">
+              CITY:
               {' '}
               <span>{doctor.city}</span>
             </li>
-            <li className="-info btn">
-              <Button title="Set Appointment Now" text="Appoint" event={handleButtonClick} />
+            <li className="-info">
+              <button type="button">Appoint </button>
             </li>
             <div className="link">
-              <Link to="/" className="discover card-link rounded p-1 d-block mt-2">
+              <Link to="/" className="discover">
                 Discover more doctors
                 {' '}
               </Link>
