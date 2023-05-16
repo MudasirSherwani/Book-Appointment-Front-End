@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import '../appointment/sohaib.css';
-import doctorbg from './doctorbg.jpg';
+import doctorbg from '../../assets/backgrounds/doctorbg.jpg';
 import baseUrl from '../../redux/base_url';
+import './doctors.css';
 
 function AddDoctor() {
   const [name, setName] = useState('');
@@ -114,12 +115,12 @@ function AddDoctor() {
 
   return (
     <section className="add-doctor">
-      <img src={doctorbg} alt="doctor" className="doctor-bg" />
+         <img src={doctorbg} alt="doctor" className="doctor-bg" />
+         <div className='add-form-container'>
+    <div className='container'>
       <form onSubmit={handleSubmit} className="doctor-form">
         <h2 className="page-title">Add Doctor</h2>
         <div className="form-group">
-          <span>Name:</span>
-          <br />
           <input
             type="text"
             id="name-input"
@@ -132,8 +133,6 @@ function AddDoctor() {
           {nameError && <span className="error">Name is required</span>}
         </div>
         <div className="form-group">
-          <span>City:</span>
-          <br />
           <input
             type="text"
             id="city-input"
@@ -146,8 +145,6 @@ function AddDoctor() {
           {cityError && <span className="error">City is required</span>}
         </div>
         <div className="form-group">
-          <span>Description:</span>
-          <br />
           <input
             type="text"
             id="description-input"
@@ -160,8 +157,6 @@ function AddDoctor() {
           {descriptionError && <span className="error">Description is required</span>}
         </div>
         <div className="form-group">
-          <span>Speciality:</span>
-          <br />
           <input
             type="text"
             id="speciality-input"
@@ -174,8 +169,6 @@ function AddDoctor() {
           {specialityError && <span className="error">Speciality is required</span>}
         </div>
         <div className="form-group image-field">
-          <span className="image-span">Image:</span>
-          <br />
           <input
             type="file"
             id="image-input"
@@ -191,6 +184,8 @@ function AddDoctor() {
           </button>
         </div>
       </form>
+      </div>
+      </div>
     </section>
   );
 }
