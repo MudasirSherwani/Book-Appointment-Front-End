@@ -38,8 +38,8 @@ const DeleteDoctor = () => {
 
   return (
     <>
-      <Container className="content">
-        <div className="row">
+      <Container className="content home--splitter flex">
+        <div className="row display-table">
           <div className="col-sm-12">
             <h2 className="mt-4 mb-4 fw-bold title">
               Delete A Doctor

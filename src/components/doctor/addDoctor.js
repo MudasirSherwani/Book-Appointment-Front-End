@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import '../appointment/sohaib.css';
-import doctorbg from '../../assets/backgrounds/doctorbg.jpg';
 import baseUrl from '../../redux/base_url';
 
 function AddDoctor() {
@@ -113,9 +112,8 @@ function AddDoctor() {
   };
 
   return (
-    <section className="add-doctor">
-      <img src={doctorbg} alt="doctor" className="doctor-bg" />
-      <div className="add-form-container">
+    <section className="content home--splitter flex">
+      <div className="form-container">
         <div className="container">
           <form onSubmit={handleSubmit} className="doctor-form">
             <h2 className="page-title">Add Doctor</h2>

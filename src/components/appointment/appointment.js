@@ -101,9 +101,8 @@ const BookAppointment = () => {
   };
 
   return (
-    <section className="add-appiontment">
-      <img src={doctorbg} alt="doctor" className="doctor-bg" />
-      <div className="add-form-container">
+    <section className="content home--splitter flex">
+      <div className="form-container">
         <h2 className="page-title">Book Doctor Appiontment</h2>
         <form className="reserve-form">
           <h4 className="form-title">Fill In The Form To Book an Appiontment</h4>
