@@ -13,8 +13,8 @@ const BookAppointment = () => {
     dispatch(getDoctorsThunk());
   }, [dispatch]);
 
-  const { doctors } = useSelector((state) => state.doctors);
-  const doctorId = doctors[0];
+  const { myDoctors } = useSelector((state) => state.myDoctors);
+  const doctorId = myDoctors[0];
   const userId = JSON.parse(window.localStorage.getItem('user_id'));
   const [disease, setDisease] = useState('');
   const [city, setCity] = useState('');
@@ -109,7 +109,7 @@ const BookAppointment = () => {
           <br />
           <select name="doctor" value={doctor} onChange={handleFieldChange} className="appoint-input select">
             <option value="0" className="doctor-option">Select Doctor</option>
-            {doctors && doctors.map((doctor) => (
+            {myDoctors && myDoctors.map((doctor) => (
               <option key={doctor.id} value={doctor.id}>{doctor.name}</option>
             ))}
           </select>
