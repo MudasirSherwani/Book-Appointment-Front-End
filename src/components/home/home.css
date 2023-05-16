@@ -1,3 +1,4 @@
+/* stylelint-disable media-feature-name-no-unknown */
 @import url('https://fonts.googleapis.com/css?family=Play:regular,700');
 
 .main--logo {
@@ -13,7 +14,7 @@
   min-width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+@media ((prefers-reduced-motion: no-preference) and (min-width: 768px)) {
   .main--logo {
     animation: main--logo-spin infinite 20s linear;
   }
@@ -115,6 +116,10 @@ nav.nav--list {
   overflow: hidden;
 }
 
+.hide--desktop {
+  display: none;
+}
+
 .nav--link,
 .active {
   color: aliceblue;
@@ -154,7 +159,7 @@ nav.nav--list {
 }
 
 .main--text {
-  max-width: 50%;
+  max-width: 60%;
 }
 
 .main--doc--content {
@@ -191,4 +196,94 @@ nav.nav--list {
   border-image: linear-gradient(25deg, #6ab7c9 0%, #22505a 75%, #6ab7c9 100%);
   border-image-slice: 1;
   background-color: #f5f5f5;
+}
+
+/* MObile screen for Nav elements */
+@media only screen and (max-width: 768px) {
+  .main--logo {
+    max-width: 7vh;
+    height: auto;
+    pointer-events: none;
+    margin: 1rem auto;
+  }
+
+  div.home--splitter {
+    top: 10vh;
+    left: 0;
+    width: 100%;
+  }
+
+  .v--header {
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav.hide--mobile,
+  .hide--mobile {
+    display: none;
+  }
+
+  .home--main {
+    width: 100vw;
+    padding: 0 1.5rem 2.5rem 1.5rem;
+  }
+
+  div.card {
+    width: 5rem;
+  }
+
+  .main--text {
+    font-size: 0.7rem;
+  }
+
+  /*
+  .home--main--content {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  .main--text {
+    max-width: 100%;
+  }
+
+  .main--btn {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .main--doc--content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .filler {
+    display: none;
+  }
+
+  .hide--mobile {
+    display: none;
+  }
+
+  .hide--desktop {
+    display: block;
+  }
+
+  .nav--link,
+  .active {
+    font-size: 4vw;
+    padding: 0.5rem 0;
+  }
+
+  .auth--title {
+    font-size: 6vw;
+  }
+
+  .logout {
+    font-size: 4vw;
+    padding: 1rem 0;
+  } */
 }
