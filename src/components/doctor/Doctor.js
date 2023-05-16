@@ -1,11 +1,13 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/extensions */
 import { AiFillInstagram, AiOutlineTwitter } from 'react-icons/ai';
 import { CgFacebook } from 'react-icons/cg';
-import React from 'react';
+import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
-import Buttton from '../button';
+import Button from '../button';
 import './doctor.css';
+import baseUrl from '../../redux/base_url';
+import Loading from '../Loading';
 
 const Doctor = (doctor) => {
   const {
@@ -14,21 +16,43 @@ const Doctor = (doctor) => {
     },
   } = doctor;
 
-  // const dispatch = useDispatch();
-  // const redirect = useNavigate();
-  const handleButtonClick = () => {
-    console.log('button clicked');
-    // dispatch(fetchDoctor());
-    // redirect('/doctors/:id');
+  const [doc, setDoctor] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleButtonClick = async () => {
+    const token = localStorage.getItem('token');
+    const headers = {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    };
+
+    try {
+      setIsLoading(true);
+      const response = await fetch(`${baseUrl}doctors/${id}`, {
+        method: 'GET',
+        headers,
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch doctor');
+      }
+
+      const data = await response.json();
+      setDoctor(data);
+      setIsLoading(true);
+    } catch (error) {
+      throw new Error(error.message);
+    }
+    return isLoading ? <Loading /> : <Link to={`/doctors/${id}`} />;
   };
 
   return (
-    <article className="doctor--card" id={id}>
+    <article className="doctor--card" id={doc}>
       <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src={image && image.url} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">
+          <Card.Subtitle className="mb-2 text-muted d-flex column">
             {speciality}
             <span className="filler" />
             {city}
@@ -37,7 +61,7 @@ const Doctor = (doctor) => {
             {description}
           </Card.Text>
           <Link to={`/doctors/${id}`}>
-            <Buttton text="Talk to me" event={handleButtonClick} />
+            <Button text="Talk to me" event={handleButtonClick} />
           </Link>
         </Card.Body>
         <Card.Body className="text-center">

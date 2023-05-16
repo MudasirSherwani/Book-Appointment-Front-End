@@ -51,6 +51,9 @@ const Homepage = () => {
         <div className="main--doc--content flex">
           <Carousel
             autoPlay
+            infinite
+            showArrows
+            showDots
             className="w-100"
             keyBoardControl
             responsive={configure([3, 2, 1])}

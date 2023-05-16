@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import baseUrl from '../../redux/base_url';
+import Loading from '../Loading';
+import '../doctor/doctor.css';
 
 const DetailsPage = () => {
   const { id } = useParams();
@@ -32,14 +34,14 @@ const DetailsPage = () => {
   }, [id]);
 
   if (!doctor) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   return (
     <div className="main-holder">
-      <section className="details-holder">
+      <section className="details-holder container-fluid d-flex column">
         <div>
-          <img id="myImage" src={doctor.image} className="d-doctor-image" alt="img" />
+          <img id="myImage" src={doctor.image} className="d-doctor-image rounded" alt="img" />
         </div>
         <div className="doctor-info">
           <ul>

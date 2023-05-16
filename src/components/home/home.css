@@ -6,11 +6,6 @@
   margin: 1rem auto;
 }
 
-.nav--link.main--logo:hover {
-  background-color: transparent;
-  /* color: #fff; */
-}
-
 .main--bg {
   position: fixed;
   z-index: -2;
@@ -168,7 +163,7 @@ nav.nav--list {
 }
 
 .social-m:hover {
-  color: #22505a;
+  color: #6ab7c9;
 }
 
 .logout {
@@ -176,4 +171,15 @@ nav.nav--list {
   font-size: 1.6vw;
   padding: 3rem 2rem;
   cursor: pointer;
+}
+
+.filler {
+  align-self: center;
+  margin: 0.2rem;
+  width: 20%;
+  height: 100%;
+  border: 2px solid #6ab7c9;
+  border-image: linear-gradient(25deg, #6ab7c9 0%, #22505a 75%, #6ab7c9 100%);
+  border-image-slice: 1;
+  background-color: #f5f5f5;
 }
