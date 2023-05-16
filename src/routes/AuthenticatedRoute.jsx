@@ -12,7 +12,7 @@ const AuthenticatedRoute = () => (
       <Route path="/login" element={<Navigate to="/" />} />
       <Route path="/reservations" element={<Reservations />} />
       <Route path="/add-doctor" element={<AddDoctor />} />
-      <Route path="/details/:id" element={<DoctorDetails />} />
+      <Route path="/doctors/:id" element={<DoctorDetails />} />
       <Route path="/delete-doctor" element={<DeleteDoctor />} />
       <Route path="/book-appointment" element={<BookAppointment />} />
     </Routes>
