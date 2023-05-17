@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import '../appointment/sohaib.css';
 import baseUrl from '../../redux/base_url';
 
-function AddDoctor() {
+const AddDoctor = () => {
   const [name, setName] = useState('');
   const [city, setCity] = useState('');
   const [description, setDescription] = useState('');
