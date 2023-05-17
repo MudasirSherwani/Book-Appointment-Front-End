@@ -183,6 +183,6 @@ const AddDoctor = () => {
       </div>
     </section>
   );
-}
+};
 
 export default AddDoctor;

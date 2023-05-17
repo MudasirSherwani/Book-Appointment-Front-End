@@ -111,6 +111,6 @@ const Reservations = () => {
       </Container>
     </>
   );
-}
+};
 
 export default Reservations;
