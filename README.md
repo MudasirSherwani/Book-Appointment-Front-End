@@ -43,7 +43,7 @@
 > This is a full-stack project. In which you can register yourself create a doctor, book an appointment
 with the doctor, see all appiontmnets, delete a doctor(s).
 
-#### [World Vision Clinic API Repository link](https://github.com/MudasirSherwani/Book-an-Appointment)
+#### [World Vision Clinic API Repository link](https://github.com/MudasirSherwani/Book-an-Appointment/tree/main)
 
 ## 📖 Kanban Board <a name="kanban"></a>
 
