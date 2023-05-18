@@ -26,6 +26,16 @@
   align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+  .loader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 78px;
+  }
+}
+
 .finder {
   color: rgb(34, 80, 90);
   font-size: 4vw;
