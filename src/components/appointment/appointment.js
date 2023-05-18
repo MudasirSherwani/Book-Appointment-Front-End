@@ -103,7 +103,7 @@ const BookAppointment = () => {
   return (
     <section className="content home--splitter flex">
       <div className="form-container">
-        <h2 className="page-title">Book Doctor Appiontment</h2>
+        <h2 className="page-title">Book Doctor Appointment</h2>
         <form className="reserve-form">
           <h4 className="form-title">Fill In The Form To Book an Appiontment</h4>
           <div className="form-group">
