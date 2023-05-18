@@ -15,7 +15,8 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 World Vision Clinic](#World-Vision-CLinic)
+- [📖 World Vision Clinic](#about-project)
+- [📖 Kanban Board](#kanban)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -42,8 +43,17 @@
 > This is a full-stack project. In which you can register yourself create a doctor, book an appointment
 with the doctor, see all appiontmnets, delete a doctor(s).
 
-### [World Vision Clinic API Repository link](https://github.com/MudasirSherwani/Book-an-Appointment)
+#### [World Vision Clinic API Repository link](https://github.com/MudasirSherwani/Book-an-Appointment)
 
+## 📖 Kanban Board <a name="kanban"></a>
+
+#### [Link to Kanban](https://github.com/users/MudasirSherwani/projects/5/views/1)
+
+#### Initial State of the Kanban
+![image](https://github.com/MudasirSherwani/Book-Appointment-Front-End/assets/86018834/b66a846f-cb91-4d7a-ac55-da69928ecdaf)
+
+#### Team Members
+       - The team is consist of 4 members.
 
 ## 🛠 Built With <a name="built-with"></a>
 
