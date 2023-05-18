@@ -207,7 +207,7 @@ nav.nav--list {
     margin: 1rem 0;
   }
 
-  div.home--splitter {
+  .home--splitter {
     top: 10vh;
     left: 0;
     width: 100%;
@@ -300,6 +300,11 @@ nav.nav--list {
 
   div .menu-icon {
     display: none;
+  }
+
+  .section.content {
+    width: 100%;
+    padding: 100px;
   }
 
   /*
