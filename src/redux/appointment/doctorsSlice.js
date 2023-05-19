@@ -15,7 +15,6 @@ export const getDoctorsThunk = createAsyncThunk('doctor/getDoctorsThunk', async 
     const data = response.data ?? [];
     return data;
   } catch (error) {
-    console.error(error);
     throw new Error('Failed to fetch doctors');
   }
 });
