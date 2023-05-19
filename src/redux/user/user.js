@@ -19,7 +19,7 @@ export const getToken = async (reqBody) => {
     const response = await axios.post(`${baseUrl}users/sign_in`, {
       user: reqBody,
     });
-    toast.success('Logged in successfully');
+    toast.success('Signed in successfully');
     return response.data;
   } catch (error) {
     if (error.response.status === 401) {
@@ -28,18 +28,3 @@ export const getToken = async (reqBody) => {
     throw new Error(error);
   }
 };
-
-// export const signOut = async (token) => {
-//   try {
-//     const response = await axios.delete(`${baseUrl}users/sign_out`, {
-//       headers: {
-//         'Content-Type': 'application/json',
-//         Authorization: token,
-//       },
-//     });
-//     toast.success('Logged out successfully');
-//     return response.data;
-//   } catch (error) {
-//     throw new Error(error);
-//   }
-// };
