@@ -93,6 +93,11 @@
   background: linear-gradient(0deg, rgba(10, 121, 146, 0.6), rgba(10, 121, 146, 0.6));
 }
 
+.form-title {
+  text-align: center;
+  font-size: 1rem;
+}
+
 .add-form-container {
   border-radius: 20px;
   overflow: hidden;
