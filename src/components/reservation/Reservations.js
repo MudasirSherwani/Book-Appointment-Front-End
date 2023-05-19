@@ -6,7 +6,7 @@ import { getReservations } from '../../redux/reservation/reservationsSlice';
 import baseUrl from '../../redux/base_url';
 import './reservation.css';
 
-function Reservations() {
+const Reservations = () => {
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector((state) => state.reservations);
   // Fetch all doctors to get the doctor name
@@ -109,6 +109,6 @@ function Reservations() {
       </Container>
     </>
   );
-}
+};
 
 export default Reservations;

@@ -22,6 +22,10 @@
   -webkit-filter: blur(5px);
 }
 
+.form-title {
+  font-weight: 500;
+}
+
 .doctor-form {
   display: flex;
   flex-direction: column;

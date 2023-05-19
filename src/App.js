@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AuthenticatedRoute from './routes/AuthenticatedRoute';
 import UnAuthenticatedRoute from './routes/UnAuthenticatedRoute';
 
-function App() {
+const App = () => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   return (
     <div className="App w--100 h--100">
@@ -19,6 +19,6 @@ function App() {
       )}
     </div>
   );
-}
+};
 
 export default App;

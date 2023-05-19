@@ -32,7 +32,7 @@ export const logout = () => async (dispatch) => {
   localStorage.removeItem('current_user');
   localStorage.removeItem('user_id');
   dispatch({ type: LOGOUT });
-  toast.success('Logged out successfully');
+  toast.success('Signed out successfully');
 };
 
 export const signup = (reqBody) => async (dispatch) => {

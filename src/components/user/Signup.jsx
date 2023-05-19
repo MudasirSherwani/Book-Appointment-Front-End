@@ -44,7 +44,7 @@ const SignupForm = () => {
   return (
     <div className="form-container">
       <Form className="login-form" onSubmit={handleSubmit}>
-        <h1 className="form-title">Book A Doctor</h1>
+        <h2 className="form-title">Create Your Account Here!</h2>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Control
             type="name"
