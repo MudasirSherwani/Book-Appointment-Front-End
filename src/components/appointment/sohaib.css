@@ -110,29 +110,6 @@ select {
   width: 100%;
 }
 
-/* .appiontment-submit-button {
-  margin-top: 1rem;
-  background: linear-gradient(90deg, #2fd3f8, #22505a, #1a7ecff6);
-  border-radius: 40px;
-  border: none;
-  font-weight: 800;
-  font-size: 3vh;
-  padding: 2% 5%;
-  color: #e9f8fc;
-  width: max-content;
-  cursor: pointer;
-  box-shadow: 10px 8px 8px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
-} */
-
-/* .appiontment-submit-button:hover {
-  opacity: 0.7;
-} */
-
-/* .appiontment-submit-button:focus {
-  background: linear-gradient(45deg, #2fd3f8, #22505a, #1a7ecff6);
-  opacity: 0.9;
-} */
-
 span {
   color: white;
 }
