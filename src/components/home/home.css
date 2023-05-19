@@ -56,7 +56,7 @@
 
 .welcome--page button,
 nav.nav--list button {
-  max-width: 30vw;
+  width: max-content;
   padding: 1rem 2rem;
   align-self: center;
 }
@@ -68,7 +68,7 @@ nav.nav--list button {
   border-radius: 40px;
   border: none;
   font-weight: 800;
-  font-size: 2vh;
+  font-size: 2vw;
   padding: 2% 15%;
   color: #e9f8fc;
   cursor: pointer;

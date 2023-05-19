@@ -4,14 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import Logo from '../../assets/logo.svg';
 import Button from '../button';
 import doc from '../../assets/backgrounds/doc_stet.png';
-import book from '../../assets/backgrounds/book.png';
-import consulting from '../../assets/backgrounds/consulting.png';
-import help from '../../assets/backgrounds/help.png';
+import help from '../../assets/backgrounds/doctorbg.jpg';
 import './home.css';
 
 const ImageChanger = () => {
   const [imageIndex, setImageIndex] = useState(0);
-  const backgroundImages = [doc, book, consulting, help];
+  const backgroundImages = [doc, help];
 
   useEffect(() => {
     const interval = setInterval(() => {
