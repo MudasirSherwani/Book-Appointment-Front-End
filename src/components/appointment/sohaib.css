@@ -22,10 +22,6 @@
   -webkit-filter: blur(5px);
 }
 
-.form-title {
-  font-weight: 500;
-}
-
 .doctor-form {
   display: flex;
   flex-direction: column;
@@ -73,6 +69,7 @@
 .form-title {
   text-align: center;
   font-size: 1rem;
+  font-weight: 500;
 }
 
 button.doctor-submit-button {
