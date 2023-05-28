@@ -32,3 +32,12 @@ tr {
 .display-table {
   width: 100%;
 }
+
+.form-container {
+  height: max-content;
+}
+
+.container.content {
+  margin-top: 5rem;
+  max-width: 100%;
+}

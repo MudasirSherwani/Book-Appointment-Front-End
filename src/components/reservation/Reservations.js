@@ -86,27 +86,25 @@ const Reservations = () => {
   return (
     <>
       <Container className="content home--splitter flex">
-        <div className="row display-table">
-          <div className="col-sm-12">
-            <h2 className="mt-4 mb-4 fw-bold title">
-              Appointments
-            </h2>
-            <form className="form w-100">
-              <table className="table">
-                <thead>
-                  <tr>
-                    <th>Res. No</th>
-                    <th>Doctor Name</th>
-                    <th>City</th>
-                    <th>Date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {content}
-                </tbody>
-              </table>
-            </form>
-          </div>
+        <div className="col-sm-12">
+          <h2 className="mt-4 mb-4 fw-bold title">
+            Reservations
+          </h2>
+          <form className="form w-100">
+            <table className="table">
+              <thead>
+                <tr>
+                  <th>Res. No</th>
+                  <th>Doctor Name</th>
+                  <th>City</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                {content}
+              </tbody>
+            </table>
+          </form>
         </div>
       </Container>
     </>

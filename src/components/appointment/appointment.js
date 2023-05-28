@@ -103,9 +103,9 @@ const BookAppointment = () => {
   return (
     <section className="content home--splitter flex">
       <div className="form-container">
-        <h2 className="page-title">Book Doctor Appiontment</h2>
+        <h2 className="page-title text-align-center">Book Doctor Appointment</h2>
         <form className="reserve-form">
-          <p className="form-title">Fill In The Form To Book an Appiontment</p>
+          <h4 className="form-title">Fill In The Form To Book an Appointment</h4>
           <div className="form-group">
             <select name="doctor" value={doctor} onChange={handleFieldChange} className="appoint-input select">
               <option value="0" className="doctor-option">Select Doctor</option>
