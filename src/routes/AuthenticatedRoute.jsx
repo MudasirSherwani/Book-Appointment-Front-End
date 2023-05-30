@@ -7,7 +7,6 @@ import DoctorDetails from '../components/doctorDetails/doctorDetails';
 import DeleteDoctor from '../components/doctor/DeleteDoctor';
 import BookAppointment from '../components/appointment/appointment';
 import Layout from '../components/navbar/Layout';
-import printToPdf from '../components/print/printToPdf';
 
 const AuthenticatedRoute = () => (
   <>
@@ -20,7 +19,6 @@ const AuthenticatedRoute = () => (
         <Route path="/doctors/:id" element={<DoctorDetails />} />
         <Route path="/delete-doctor" element={<DeleteDoctor />} />
         <Route path="/book-appointment" element={<BookAppointment />} />
-        <Route path="/print" element={<printToPdf />} />
       </Route>
     </Routes>
   </>
