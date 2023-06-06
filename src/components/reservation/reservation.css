@@ -27,8 +27,28 @@ tr {
 
 .content {
   background-color: #0a7992;
+  display: flex;
+  flex-direction: column;
 }
 
 .display-table {
   width: 100%;
+}
+
+.print-page {
+  width: 100%;
+  height: inherit;
+}
+
+.print-button {
+  width: 120px;
+  height: 40px;
+}
+
+.print-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
 }
