@@ -2,18 +2,18 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Container } from 'react-bootstrap';
 // eslint-disable-next-line import/no-extraneous-dependencies
+import { useReactToPrint } from 'react-to-print';
 import { getReservations } from '../../redux/reservation/reservationsSlice';
 import baseUrl from '../../redux/base_url';
 import './reservation.css';
-import { useReactToPrint } from 'react-to-print';
 
 const Reservations = () => {
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector((state) => state.reservations);
   const componentRef = useRef();
-  const handlePrint = useReactToPrint ({
+  const handlePrint = useReactToPrint({
     content: () => componentRef.current,
-    documentTitle: 'Reserve-List'
+    documentTitle: 'Reserve-List',
     // onAfterPrint: () => alert('Print Successfully Done')
   });
   // Fetch all doctors to get the doctor name
@@ -92,11 +92,11 @@ const Reservations = () => {
   }
   return (
     <>
-   
+
       <Container className="content home--splitter flex">
-      <div className="print-container">
-        <button className="print-button" onClick={handlePrint} >Print Out List</button>
-      </div>
+        <div className="print-container">
+          <button type="button" className="print-button" onClick={handlePrint}>Print Out List</button>
+        </div>
         <div className="row display-table">
           <div ref={componentRef} className="col-sm-12 print-page">
             <h2 className="mt-4 mb-4 fw-bold title">
